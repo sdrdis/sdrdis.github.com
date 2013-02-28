@@ -239,7 +239,7 @@
 <h2><span>Problem summary</span></h2>
 <p><span>The goal of the contest was to maximize the solar energy production of the International Space Station for a total period (92 minute) in difficult orbital situations.</span></p>
 <p><span>Here is a small labelled drawing I completed:</span></p>
-<p style="text-align: center;"><span><img src="media/iss/nasa-iss-longeron.png" title="Nasa Iss Longeron" alt="Nasa Iss Longeron"></span></p>
+<p style="text-align: center;"><span><img title="Nasa Iss Longeron" src="media/iss/nasa-iss-longeron.png" alt="Nasa Iss Longeron"></span></p>
 <p><span>For achieving this goal, we could affect 21 parameters:</span></p>
 <ul>
 <li>The Yaw of the ISS, which was defined as its orientation. The orientation could only be set at the begining.</li>
@@ -254,7 +254,7 @@
 <li>Score was reduced if SAW didn't meet a minimal energy production specific amount.</li>
 </ul>
 <p>Problem was therefore very complex, with various parameters to take into account. Hopefully, the contest provided us a previsualizer which has been of great help for me:</p>
-<p><img src="cache/media/iss/iss-vizualizer/650-322.png" title="ISS Vizualizer" alt="ISS Vizualizer"></p>
+<p><img title="ISS Vizualizer" src="cache/media/iss/iss-vizualizer/650-322.png" alt="ISS Vizualizer"></p>
 <p>Last but not least, the solutions would be tested on 6 specific and announced orbital situations, which allowed precalculation. This way you could predetermine all angles / velocities before and submit a solution containing these values and a loop iterating on it. Most competitors, as myself, adopted this solution.</p>
 <h2>Problem analysis</h2>
 <p>This was an energy optimization problem, where time had a very importance place : at every minute, the sun position in relation to the ISS was a little bit different than the previous minute. It was important to adjust the all angles so that:</p>
@@ -271,8 +271,8 @@
 <p>For the simplest orbital positions (for those who have read the problem statement, I am talking about beta angle -71 and 71), this simple supposition worked.</p>
 <p>I noticed though that SAWs always shade one pane of the SAW behind it. No matter how you set the angle, you could never get a better solution than this. I think this is simply not possible, as none of the other participants succeeded to.</p>
 <p>But my first supposition was not sufficient for other orbital positions.</p>
-<p style="text-align: center;"><img src="cache/media/iss/iss-simple/650-322.png" title="ISS Simple" alt="ISS Simple"><br>ISS on simplest orbital position with first solution: no shadow</p>
-<p style="text-align: center;"><img src="cache/media/iss/iss-complicated/650-320.png" title="ISS Complicated" alt="ISS Complicated"><br><span style="line-height: 1.4em;">ISS on more complicated orbital position with first solution: shadow</span></p>
+<p style="text-align: center;"><img title="ISS Simple" src="cache/media/iss/iss-simple/650-322.png" alt="ISS Simple"><br>ISS on simplest orbital position with first solution: no shadow</p>
+<p style="text-align: center;"><img title="ISS Complicated" src="cache/media/iss/iss-complicated/650-320.png" alt="ISS Complicated"><br><span style="line-height: 1.4em;">ISS on more complicated orbital position with first solution: shadow</span></p>
 <p>With this image we clearly see that we need to change the front SAW angles. I first tried to solve this problem with geometry. This is a line-circle intersection problem ; the circle represented by all position front SAW can have, and the line is the sun ray intersecting the back SAW panel bottom. But when testing on the visualizer I noticed there was some small difference I didn't succeed to explain. So instead I solved this matter with a linear regression.</p>
 <p>This second solution was sufficient enough for most orbital position, except for two&nbsp;<span>(for those who have read the problem statement, I am talking about beta angle -73 and 73). For those solutions, I noticed total amount of BGA angles rotation exceeded a lot the limit of 80 degrees. After some testing, I determined two solution to this problem:</span></p>
 <ul>
@@ -300,8 +300,8 @@
 <p><span style="line-height: 1.4em;">This supposed that the time needed for one path, that is setting 2 * 92 = 184 angles, would not take too much time to manually configure. This was the challenge of the interface.</span></p>
 <h2><span style="line-height: 1.4em;">Interface implementation</span></h2>
 <p><span style="line-height: 1.4em;">The idea was to make an easy interface in order to manually configure path very quickly. I gradually added new features as I needed them, but this is what it looked like at the end:</span></p>
-<p style="text-align: center;"><span style="line-height: 1.4em;"><img src="cache/media/iss/interface-and-iss/650-298.png" title="Interface And Iss" alt="Interface And Iss"><br>I used my interface near the vizualizer in order to get an idea of the current state</span></p>
-<p style="text-align: center;"><span style="line-height: 1.4em;"><img src="media/iss/interface-only.png" title="Interface Only" alt="Interface Only"><br>Here, a larger snapshot on the interface</span></p>
+<p style="text-align: center;"><span style="line-height: 1.4em;"><img title="Interface And Iss" src="cache/media/iss/interface-and-iss/650-298.png" alt="Interface And Iss"><br>I used my interface near the vizualizer in order to get an idea of the current state</span></p>
+<p style="text-align: center;"><span style="line-height: 1.4em;"><img title="Interface Only" src="media/iss/interface-only.png" alt="Interface Only"><br>Here, a larger snapshot on the interface</span></p>
 <p style="text-align: left;">That's basically with this interface that I solved the problem. The vizualizer supplied me a preview of the current state, and that was very important in order to understand which area were shadowed and optimize the score this way.</p>
 <p style="text-align: left;">On my interface, first, you can see a table on the top.</p>
 <p style="text-align: left;">This table has 12 lines: first for header, then one for each SARJ and linked SAWs, and the last line is the total (sum of powers...).</p>
@@ -336,6 +336,8 @@
 <h2>Results</h2>
 <p>Time was very short and I finished my sixth case one hour before the end. So I submitted my program with those values manually configured.</p>
 <p>Few days later, score came back, and it turned out pretty well: my solution appeared on the 17th place on over 4000 subscribers and more than 400 submitted solution. Here are the <a href="http://community.topcoder.com/longcontest/stats/?module=ViewOverview&amp;rd=15520" target="_blank">standings</a>&nbsp;and the <a href="http://apps.topcoder.com/forums/?module=ThreadList&amp;forumID=566146&amp;sortField=9&amp;sortOrder=0&amp;start=0" target="_blank">forums</a>&nbsp;where a lot of interesting ideas were discussed.</p>
+<p>Here is a small preview of my solution for the test case beta = 71° (running on two orbits):</p>
+<p style="text-align: center;"><iframe src="http://www.youtube.com/embed/xS32AWAW_CI" frameborder="0" width="560" height="315"></iframe></p>
 <h2>How I could have improved my score with AI</h2>
 <p>Since the solution I provided was manually configured, I think the score could be improved a lot by using AI techniques I didn't know back then. That is why few weeks later I started the <a href="https://class.coursera.org/aiplan-001" target="_blank">Artificial Intelligence Planning</a>&nbsp;on coursera by Gerhard Wickler and Austin Tate&nbsp;offered by the University of Edinburgh.</p>
 <p>I have only finished week 2, but I already have some ideas on how I could have improved my score.</p>
@@ -347,7 +349,7 @@
 <li><span style="line-height: 1.5em;">This wouldn't be sufficient though, because sometime traveling from one optima to the other requires more than one minute. Therefore,&nbsp;</span><span style="line-height: 1.5em;">for each minute, we could consider current minute as an intermediary step on a one to n (n is to determine) path from one optima to the other.</span></li>
 <li><span style="line-height: 1.5em;">With all this states we get a graph. Here is what it could look like:</span></li>
 </ul>
-<p style="text-align: center;"><img src="cache/media/iss/minutes/650-412.jpg" title="Minutes" alt="Minutes"></p>
+<p style="text-align: center;"><img title="Minutes" src="cache/media/iss/minutes/650-412.jpg" alt="Minutes"></p>
 <ul>
 <li>Get optimal path through a search algorithm, maybe A* if find an adequate euristic.</li>
 <li>Total BGA rotation, longerons, and minimal power could also be processed by the algorithm.</li>
