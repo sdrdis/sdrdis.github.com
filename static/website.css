@@ -1,0 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+#pagename {
+    display: none;
+}
+
+.middle-header-fixed {
+    top: 90px;
+}
+
+#header-baseline {
+    display: none;
+}
+
+#header-title {
+    line-height: 44px;
+    color: #aaa;
+}
+
+.link-title {
+    text-decoration: none !important;
+}
+
+.timeline-event {
+    border-radius: 0px !important;
+    border-width: 0 !important;
+    color: white !important;
+}
+
+.blognews_summary {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.timeline-frame {
+    border: 1px solid #ddd;
+}
+
+.sdrdis_timeline_graph {
+    display: none;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 800px) {
+    .timeline_category .timeline_category, .timeline_category .timeline_category_items {
+        margin-left: 20px;
+    }
+
+    .timeline_date_range {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .blognews_list .blognews_summary {
+        margin-left: 210px;
+    }
+    
+    .sdrdis_timeline_graph {
+        display: block;
+    }
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: auto;
+}
+

@@ -2,144 +2,250 @@
 <html>
 <head>
 <base href="http://sebastien.drouyer.com/" />
+<title>Projects</title>
 <meta name="robots" content="index,follow">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Projects</title>
-    <link rel="stylesheet" href="static/apps/sdrdis_templates_midnight/stylesheets/styles.css">
-    <link rel="stylesheet" href="static/apps/sdrdis_templates_midnight/stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="static/apps/sdrdis_templates_midnight/javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="static/apps/sdrdis_templates_midnight/stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-<link rel="alternate" type="application/rss+xml" title="Posts list" href="projects/rss/posts.html">
-<link rel="alternate" type="application/rss+xml" title="Comments list" href="projects/rss/comments.html">
-<link href="static/apps/custom_timeline/css/custom.css" rel="stylesheet" type="text/css">
-<link href="static/apps/sdrdis_timeline/css/timeline.css" rel="stylesheet" type="text/css">
-<link href="static/apps/sdrdis_timeline/plugins/timeline-2.3.2/timeline.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+            <link title="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/skin/Bootstrap.css" rel="stylesheet" type="text/css"
+              href="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/skin/Bootstrap.css">
+        <link rel="stylesheet"
+          href="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/social-buttons-3.css">
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css"
+          data-local="static/apps/noviusos_template_bootstrap/vendor/css/jquery-ui.css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"
+          data-local="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/font-awesome.css">
+
+    <!-- Fallback Jquery -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery ||
+        document.write('<script src="static/apps/noviusos_template_bootstrap/vendor/js/jquery.min.j">\x3C/script>');
+    </script>
+
+    <!-- Fallback Jquery UI-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery.ui ||
+        document.write('<script src="static/apps/noviusos_template_bootstrap/vendor/js/jquery-ui.min.j">\x3C/script>');
+    </script>
+
+    <!-- Fallback Bootstrap.js-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $.fn.modal || document.write('<script src="static/apps/noviusos_template_bootstrap/vendor/' +
+            'bootstrap/js/bootstrap.min.js">\x3C/script>');
+    </script>
+
+    <script src="static/apps/noviusos_template_bootstrap/vendor/bootstrap/js/less-1.7.0.min.js"></script>
+    <script src="static/apps/noviusos_template_bootstrap/js/script.js"></script>
+
+    <style>
+        @import 'static/website.css';    </style>
+
+<link rel="alternate" type="application/rss+xml" title="Posts list" href="http://sebastien.drouyer.com/projects/rss/posts.html">
+<link rel="alternate" type="application/rss+xml" title="Comments list" href="http://sebastien.drouyer.com/projects/rss/comments.html">
+<link href="static/apps/sdrdis_timeline/plugins/timeline-2.9.0/timeline.css" rel="stylesheet" type="text/css">
 <link href="static/apps/noviusos_blognews/css/blognews.css" rel="stylesheet" type="text/css">
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script src="static/apps/sdrdis_timeline/plugins/timeline-2.3.2/timeline-min.js" type="text/javascript"></script>
+<script src="static/apps/sdrdis_timeline/plugins/timeline-2.9.0/timeline-min.js" type="text/javascript"></script>
 </head>
-<body>
-<div id="header">
-                <nav>
-            <div class="primary_menu">
-                <li class="lvl0"><a href="http://sebastien.drouyer.com/">About me</a></li>
+
+
+<body id="principal"
+      class="customisable title_page"
+    >
+
+<div id="content" class="container-fluid">
+    <div class="head_content row header-fixed">
+    <nav class="navbar navbar-inverse " role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="sitename"
+               href="http://sebastien.drouyer.com/"
+                ><span id="header-logo-small" class="image_small" style=" display : none"> <img src=""></span><span id="header-title-small" class="title_small" style="">Sébastien Drouyer</span></a>
+            <button class="navbar-toggle collapsed right" data-target=".navbar-collapse" data-toggle="collapse"
+                    type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" id="list-menu">
+    <li class="lvl0"><a class=" active" href="http://sebastien.drouyer.com/projects.html">Projects</a></li>    </ul>
             </div>
-            <div class="secondary_menu">
-                            <li class="lvl0"><a href="http://sebastien.drouyer.com/projects.html"  class="active">Projects</a>
-                                </li>
-                                <li class="lvl0"><a href="http://sebastien.drouyer.com/contact-me.html" >Contact me</a>
-                                </li>
-                            </div>
-        </nav>
-        </div><!-- end header -->
 
-<div class="wrapper">
+    </nav>
+    <div id="header" class="nav-logo customisable title_header">
+        <a href="#" style="display: inline-block;"><span id="header-logo" class="image " style="display : none ;" > <img src=""></span></a>
 
-    <section>
-        <h1>Projects</h1>
+        <span class="titleonly">
+            <a class="link-title" href="#" style="display: inline-block;"><span id="header-title" style="">Sébastien Drouyer</span><br>
+            <span id="header-baseline" style=""> </span></a>
+        </span>
+    </div>
+</div>
 
-        <div class="blognews_posts_list">
+
+
+
+
+<div  class="row middle-header-fixed ">
+         <div id="middle_content" class=" col-md-12 col-sm-9 col-xs-12" >
+            <div id="block-grid" class=" customisable col-md-12 col-sm-12 col-xs-12 main_wysiwyg"><h1 id="pagename">Projects</h1>
+            <div id="grid_content_layout">
+            <style>
+    .div_layout {
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+
+    .layout {
+        padding: 0;
+    }
+</style>
+
+	 <div class='div_layout col-md-1'
+                 style='' data-val=0> </div>
+	 <div class='div_layout col-md-10'
+                 style='' data-val=3> <div class="blognews_posts_list">
     <style type="text/css">
-    div.timeline-cat-1 {
-        background-color: #00bb26;
-        color: white;
-        border-top-color: #28e34e;
-        border-left-color: #28e34e;
-        border-bottom-color: #009300;
-        border-right-color: #009300;
-    }
-    div.timeline-cat-5 {
-        background-color: #ab0000;
-        color: white;
-        border-top-color: #d32828;
-        border-left-color: #d32828;
-        border-bottom-color: #830000;
-        border-right-color: #830000;
-    }
-    div.timeline-cat-6 {
-        background-color: #000000;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-1 {
+        background: #000000;
         color: white;
         border-top-color: #282828;
         border-left-color: #282828;
         border-bottom-color: #000000;
         border-right-color: #000000;
     }
-    div.timeline-cat-4 {
-        background-color: #000993;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-4 {
+        background: #5cb85c;
         color: white;
-        border-top-color: #2831bb;
-        border-left-color: #2831bb;
-        border-bottom-color: #00006b;
-        border-right-color: #00006b;
+        border-top-color: #84e084;
+        border-left-color: #84e084;
+        border-bottom-color: #349034;
+        border-right-color: #349034;
     }
-    div.timeline-cat-7 {
-        background-color: #009b9b;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-5 {
+        background: #d9544f;
         color: white;
-        border-top-color: #28c3c3;
-        border-left-color: #28c3c3;
-        border-bottom-color: #007373;
-        border-right-color: #007373;
+        border-top-color: #ff7c77;
+        border-left-color: #ff7c77;
+        border-bottom-color: #b12c27;
+        border-right-color: #b12c27;
     }
-    div.timeline-cat-8 {
-        background-color: #890084;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-6 {
+        background: #000000;
         color: white;
-        border-top-color: #b128ac;
-        border-left-color: #b128ac;
-        border-bottom-color: #61005c;
-        border-right-color: #61005c;
+        border-top-color: #282828;
+        border-left-color: #282828;
+        border-bottom-color: #000000;
+        border-right-color: #000000;
     }
-    div.timeline-cat-9 {
-        background-color: #555555;
-        color: white;
-        border-top-color: #7d7d7d;
-        border-left-color: #7d7d7d;
-        border-bottom-color: #2d2d2d;
-        border-right-color: #2d2d2d;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-7 {
+        background: #b85cb8;
+        color: black;
+        border-top-color: #e084e0;
+        border-left-color: #e084e0;
+        border-bottom-color: #903490;
+        border-right-color: #903490;
     }
-    div.timeline-cat-10 {
-        background-color: #0a439d;
-        color: white;
-        border-top-color: #326bc5;
-        border-left-color: #326bc5;
-        border-bottom-color: #001b75;
-        border-right-color: #001b75;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-8 {
+        background: #b85cb8;
+        color: black;
+        border-top-color: #e084e0;
+        border-left-color: #e084e0;
+        border-bottom-color: #903490;
+        border-right-color: #903490;
     }
-    div.timeline-cat-11 {
-        background-color: #b08000;
-        color: white;
-        border-top-color: #d8a828;
-        border-left-color: #d8a828;
-        border-bottom-color: #885800;
-        border-right-color: #885800;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-9 {
+        background: #f0ad4e;
+        color: black;
+        border-top-color: #ffd576;
+        border-left-color: #ffd576;
+        border-bottom-color: #c88526;
+        border-right-color: #c88526;
     }
-    div.timeline-cat-12 {
-        background-color: #00ad23;
-        color: white;
-        border-top-color: #28d54b;
-        border-left-color: #28d54b;
-        border-bottom-color: #008500;
-        border-right-color: #008500;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-10 {
+        background: #f0ad4e;
+        color: black;
+        border-top-color: #ffd576;
+        border-left-color: #ffd576;
+        border-bottom-color: #c88526;
+        border-right-color: #c88526;
     }
-    div.timeline-cat-13 {
-        background-color: #00c728;
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-11 {
+        background: #b85cb8;
+        color: black;
+        border-top-color: #e084e0;
+        border-left-color: #e084e0;
+        border-bottom-color: #903490;
+        border-right-color: #903490;
+    }
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-12 {
+        background: #3379b7;
         color: white;
-        border-top-color: #28ef50;
-        border-left-color: #28ef50;
-        border-bottom-color: #009f00;
-        border-right-color: #009f00;
+        border-top-color: #5ba1df;
+        border-left-color: #5ba1df;
+        border-bottom-color: #0b518f;
+        border-right-color: #0b518f;
+    }
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-13 {
+        background: #5bc0de;
+        color: black;
+        border-top-color: #83e8ff;
+        border-left-color: #83e8ff;
+        border-bottom-color: #3398b6;
+        border-right-color: #3398b6;
+    }
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-14 {
+        background: #000000;
+        color: white;
+        border-top-color: #282828;
+        border-left-color: #282828;
+        border-bottom-color: #000000;
+        border-right-color: #000000;
+    }
+
+
+    #timeline_54f8fc0e06e72 .ui-state-default.timeline-cat-15 {
+        background: #f0ad4e;
+        color: black;
+        border-top-color: #ffd576;
+        border-left-color: #ffd576;
+        border-bottom-color: #c88526;
+        border-right-color: #c88526;
     }
 </style>
-<div id="mytimeline"></div>
+<div id="timeline_54f8fc0e06e72" class="sdrdis_timeline_graph"></div>
 
 <script type="text/javascript">
     google.load("visualization", "1");
@@ -160,83 +266,68 @@
         data.addColumn('datetime', 'end');
         data.addColumn('string', 'content');
         data.addColumn('string', 'className');
-        data.addColumn('string', 'url');
+        data.addColumn('string', 'group'); // HERE
 
     
 
         data.addRows([
-[new Date(1318197600000), new Date(1326150000000), "Stanford - coursera : Machine learning", "timeline-cat-13", "http:\/\/sebastien.drouyer.com\/projects\/stanford-machine-learning.html"],
-[new Date(1220220000000), new Date(1309384800000), "INSA Lyon (IT)", "timeline-cat-12", "http:\/\/sebastien.drouyer.com\/projects\/insa-lyon-masters-degree-in-engineering-specialised-in-it.html"],
-[new Date(1157061600000), new Date(1214776800000), "INSA Rouen", "timeline-cat-12", "http:\/\/sebastien.drouyer.com\/projects\/insa-rouen.html"],
-[new Date(1329433200000), new Date(1334268000000), "Berkeley - coursera : SaaS", "timeline-cat-13", "http:\/\/sebastien.drouyer.com\/projects\/berkeley-coursera-saas.html"],
-[new Date(1360450800000), new Date(1363530900000), "Stanford - coursera: Algorithms Part 1", "timeline-cat-13", "http:\/\/sebastien.drouyer.com\/projects\/stanford-coursera-algorithms-part-1.html"],
-[new Date(1245016800000), new Date(1249250400000), "Lumai prod - game developper", "timeline-cat-4", "http:\/\/sebastien.drouyer.com\/projects\/game-developper-lumai-prod.html"],
-[new Date(1275343200000), new Date(1285797600000), "Safecoms - Developper: Peppercan CRM", "timeline-cat-4", "http:\/\/sebastien.drouyer.com\/projects\/safecoms-peppercan-crm.html"],
-[new Date(1291244400000), new Date(1324767240000), "Novius - R&D engineer: Reso-Nova", "timeline-cat-4", "http:\/\/sebastien.drouyer.com\/projects\/novius-reso-nova-and-novius-os.html"],
-[new Date(1201820400000), new Date(1213480800000), "INSA Rouen IT contest: 1st price", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/insa-rouen-it-contest.html"],
-[new Date(1263510000000), new Date(1273874400000), "Infotel Web Application contest: 1st price", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/infotel-1st-price-in-web-application-contest.html"],
-[new Date(1297292400000), new Date(1305410400000), "Infotel Mobile Application contest: 2nd price", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/infotel-2nd-price-in-mobile-application-contest.html"],
-[new Date(1226703600000), new Date(1234220400000), "Spaceshadows", "timeline-cat-7", "http:\/\/sebastien.drouyer.com\/projects\/spaceshadows.html"],
-[new Date(1332712800000), new Date(1334354400000), "Nasa Tournament Lab - USPTO Algorithm chalenge: 6th place", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/nasa-tournament-lab-6th-place-in-uspto-algorithm-chalenge.html"],
-[new Date(1351724400000), new Date(1354316400000), "Github game off: 1st place", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/github-game-off-1st-place.html"],
-[new Date(1236207600000), new Date(1255557600000), "Spaceshadows - online", "timeline-cat-7", "http:\/\/sebastien.drouyer.com\/projects\/spaceshadows-online.html"],
-[new Date(1289775600000), new Date(1350252000000), "Unlimited Galaxy", "timeline-cat-7", "http:\/\/sebastien.drouyer.com\/projects\/unlimited-galaxy.html"],
-[new Date(1336428000000), new Date(1336471200000), "jquery.serialize-hash", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/jquery.serialize-hash.html"],
-[new Date(1339711200000), new Date(1341007200000), "jquery.earth-3d.js", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/jquery.earth-3d.js.html"],
-[new Date(1323903600000), new Date(1324076340000), "Agenda", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/agenda.html"],
-[new Date(1356303600000), new Date(1356476400000), "haml_to_star", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/haml_to_star.html"],
-[new Date(1356390000000), new Date(1356476400000), "haml_to_js", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/html_to_js.html"],
-[new Date(1357254000000), new Date(1357340340000), "guard-templates-jshaml", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/guard-templates-jshaml.html"],
-[new Date(1357772400000), new Date(1357815600000), "sdrdis_templates_midnight", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/sdrdis_templates_midnight.html"],
-[new Date(1358031600000), new Date(1358074800000), "sdrdis_color", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/sdrdis_color.html"],
-[new Date(1357945200000), new Date(1357988400000), "sdrdis_datetime", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/sdrdis_datetime.html"],
-[new Date(1357945200000), new Date(1358031600000), "sdrdis_timeline", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/sdrdis_timeline.html"],
-[new Date(1367674800000), new Date(1371512820000), "University of Washington - coursera: Computational Neuroscience", "timeline-cat-13", "http:\/\/sebastien.drouyer.com\/projects\/university-of-washington-coursera-computational-neuroscience.html"],
-[new Date(1308931200000), new Date(1309104000000), "Game Dev Party 1", "timeline-cat-9", "http:\/\/sebastien.drouyer.com\/projects\/game-dev-party-1.html"],
-[new Date(1332522000000), new Date(1332691200000), "Game Dev Party 2", "timeline-cat-9", "http:\/\/sebastien.drouyer.com\/projects\/game-dev-party-2.html"],
-[new Date(1353690000000), new Date(1353862800000), "Game Dev Party 3", "timeline-cat-9", "http:\/\/sebastien.drouyer.com\/projects\/game-dev-party-3.html"],
-[new Date(1354285800000), new Date(1354329000000), "PHP Tour Nantes: FuelPHP - A framework, yes \u2013 Automagic, no!", "timeline-cat-10", "http:\/\/sebastien.drouyer.com\/projects\/nantes-fuelphp-a-framework-yes-automagic-no.html"],
-[new Date(1341928800000), new Date(1341972000000), "RMLL: FuelPHP - A framework, yes \u2013 Automagic, no!", "timeline-cat-10", "http:\/\/sebastien.drouyer.com\/projects\/rmll-fuelphp-a-framework-yes-automagic-no.html"],
-[new Date(1350684000000), new Date(1351375200000), "jugglingdb", "timeline-cat-11", "http:\/\/sebastien.drouyer.com\/projects\/jugglingdb.html"],
-[new Date(1357254000000), new Date(1357297200000), "guard-templates", "timeline-cat-11", "http:\/\/sebastien.drouyer.com\/projects\/guard-templates.html"],
-[new Date(1358287200000), new Date(1358619900000), "sdrdis_book", "timeline-cat-8", "http:\/\/sebastien.drouyer.com\/projects\/sdrdis_book.html"],
-[new Date(1358794800000), new Date(1360170000000), "Nasa Tournament Lab - Longeron Challenge: 17th place", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/nasa-tournament-lab-longeron-challenge-17th-place.html"],
-[new Date(1360976580000), new Date(1363098960000), "The University Of Edinburgh - coursera: Artificial Intelligence Planning", "timeline-cat-13", "http:\/\/sebastien.drouyer.com\/projects\/the-university-of-edinburgh-coursera-artificial-intelligence-planning.html"],
-[new Date(1364822520000), new Date(1367215200000), "Nasa Tournament Lab - Robonaut Challenge: 2nd and 1st place", "timeline-cat-5", "http:\/\/sebastien.drouyer.com\/projects\/nasa-tournament-lab-robonaut-challenge-and-extension-2nd-and-1st-place.html"],
-[new Date(1325458560000), maxDate, "Novius - R&D engineer: Novius OS", "timeline-cat-4", "http:\/\/sebastien.drouyer.com\/projects\/novius-novius-os.html"],
-[new Date(1349042640000), maxDate, "Novius: FuelPHP trainer", "timeline-cat-4", "http:\/\/sebastien.drouyer.com\/projects\/novius-fuelphp-trainer.html"]        ]);
+[new Date(1157061600000), new Date(1214776800000), "INSA Rouen", "timeline-cat-12", "Education"],
+[new Date(1220220000000), new Date(1309384800000), "INSA Lyon (IT)", "timeline-cat-12", "Education"],
+[new Date(1318197600000), new Date(1326150000000), "Stanford - coursera : Machine learning", "timeline-cat-13", "Education"],
+[new Date(1329433200000), new Date(1334268000000), "Berkeley - coursera : SaaS", "timeline-cat-13", "Education"],
+[new Date(1360450800000), new Date(1363530900000), "Stanford - coursera: Algorithms Part 1", "timeline-cat-13", "Education"],
+[new Date(1245016800000), new Date(1249250400000), "Lumai prod - game developper", "timeline-cat-4", "Professional"],
+[new Date(1275343200000), new Date(1285797600000), "Safecoms - Developper: Peppercan CRM", "timeline-cat-4", "Professional"],
+[new Date(1291244400000), new Date(1388530440000), "Novius - R\u0026D engineer: Reso-nova, Novius OS and FuelPHP trainer", "timeline-cat-4", "Professional"],
+[new Date(1201820400000), new Date(1213480800000), "INSA Rouen IT contest: 1st price", "timeline-cat-5", "Contests"],
+[new Date(1263510000000), new Date(1273874400000), "Infotel Web Application contest: 1st price", "timeline-cat-5", "Contests"],
+[new Date(1297292400000), new Date(1305410400000), "Infotel Mobile Application contest: 2nd price", "timeline-cat-5", "Contests"],
+[new Date(1332712800000), new Date(1334354400000), "Nasa Tournament Lab - USPTO Algorithm chalenge: 6th place", "timeline-cat-5", "Contests"],
+[new Date(1351724400000), new Date(1354316400000), "Github game off: 1st place", "timeline-cat-5", "Contests"],
+[new Date(1226703600000), new Date(1234220400000), "Spaceshadows", "timeline-cat-7", "Side projects"],
+[new Date(1236207600000), new Date(1255557600000), "Spaceshadows - online", "timeline-cat-7", "Side projects"],
+[new Date(1336428000000), new Date(1336471200000), "jquery.serialize-hash", "timeline-cat-8", "Side projects"],
+[new Date(1339711200000), new Date(1341007200000), "jquery.earth-3d.js", "timeline-cat-8", "Side projects"],
+[new Date(1323903600000), new Date(1324076340000), "Agenda", "timeline-cat-8", "Side projects"],
+[new Date(1356303600000), new Date(1356476400000), "haml_to_star", "timeline-cat-8", "Side projects"],
+[new Date(1356476400000), new Date(1356562800000), "haml_to_js", "timeline-cat-8", "Side projects"],
+[new Date(1357254000000), new Date(1357340340000), "guard-templates-jshaml", "timeline-cat-8", "Side projects"],
+[new Date(1357772400000), new Date(1357815600000), "sdrdis_templates_midnight", "timeline-cat-8", "Side projects"],
+[new Date(1357945200000), new Date(1358031600000), "sdrdis_timeline", "timeline-cat-8", "Side projects"],
+[new Date(1308931200000), new Date(1309104000000), "Game Dev Party 1", "timeline-cat-9", "Events, conferences and publications"],
+[new Date(1332522000000), new Date(1332691200000), "Game Dev Party 2", "timeline-cat-9", "Events, conferences and publications"],
+[new Date(1353690000000), new Date(1353862800000), "Game Dev Party 3", "timeline-cat-9", "Events, conferences and publications"],
+[new Date(1354285800000), new Date(1354329000000), "PHP Tour Nantes: FuelPHP - A framework, yes \u2013 Automagic, no!", "timeline-cat-10", "Events, conferences and publications"],
+[new Date(1341928800000), new Date(1341972000000), "RMLL: FuelPHP - A framework, yes \u2013 Automagic, no!", "timeline-cat-10", "Events, conferences and publications"],
+[new Date(1350684000000), new Date(1351375200000), "jugglingdb", "timeline-cat-11", "Side projects"],
+[new Date(1357167600000), new Date(1357254000000), "guard-templates", "timeline-cat-11", "Side projects"],
+[new Date(1358287200000), new Date(1358619900000), "sdrdis_book", "timeline-cat-8", "Side projects"],
+[new Date(1358794800000), new Date(1360170000000), "Nasa Tournament Lab - Longeron Challenge: 17th place", "timeline-cat-5", "Contests"],
+[new Date(1360976580000), new Date(1363098960000), "The University Of Edinburgh - coursera: Artificial Intelligence Planning", "timeline-cat-13", "Education"],
+[new Date(1364822520000), new Date(1367215200000), "Nasa Tournament Lab - Robonaut Challenge: 2nd and 1st place", "timeline-cat-5", "Contests"],
+[new Date(1367674800000), new Date(1371512820000), "University of Washington - coursera: Computational Neuroscience", "timeline-cat-13", "Education"],
+[new Date(1412114400000), maxDate, "IFP, Mines Paristech : Computer Vision PhD thesis", "timeline-cat-4", "Professional"],
+[new Date(1412114400000), maxDate, "IFP, Mines Paristech : Computer Vision PhD thesis", "timeline-cat-12", "Education"],
+[new Date(1398895200000), new Date(1423954800000), "Book : FuelPHP Application Development Blueprints", "timeline-cat-15", "Events, conferences and publications"]        ]);
 
         // specify options
         var options = {
             "width":  "100%",
-            "height": "300px",
             "style": "box",
+            eventMargin: 0,
+            eventMarginAxis: 0,
             "min": minDate,
             "max": maxDate,
             "intervalMin": 1000 * 60 * 60 * 24 * 3, // 30 days
             "start": startDate,
-            "end": endDate
+            "end": endDate,
+            stackEvents: true,
+            groupMinHeight: 31
             //"intervalMax": 1000 * 60 * 60 * 24 * 365 * 1.5
         };
 
         // Instantiate our timeline object.
-        var timeline = new links.Timeline(document.getElementById('mytimeline'));
-
-        function getSelectedRow() {
-            var row = undefined;
-            var sel = timeline.getSelection();
-            if (sel.length) {
-                if (sel[0].row != undefined) {
-                    row = sel[0].row;
-                }
-            }
-            return row;
-        }
-
-        google.visualization.events.addListener(timeline, 'select', function(event) {
-            var row = getSelectedRow();
-            document.location.href = data.getValue(row, 4);
-        });
+        var timeline = new links.Timeline(document.getElementById("timeline_54f8fc0e06e72"));
 
         // Draw our timeline with the created data and options
         timeline.draw(data, options);
@@ -248,10 +339,20 @@
         <div class="blognews_list">
         <div class="timeline_category timeline_category_level_1"><h2>Education</h2><div class="timeline_category_items"></div><div class="timeline_category timeline_category_level_2"><h3>Universities</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
+    <div class="timeline_date_range">Since 10/01/14</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/ifp,-mines-paristech-computer-vision-phd-thesis.html">
+    IFP, Mines Paristech : Computer Vision PhD thesis</a>
+        <div class="blognews_summary">
+        <p>Research engineer, Ph.D. degree in Computer Vision (Mathematical Morphology)</p>
+    </div>
+      </div>
+</div>
+<div class="blognews_post blognews_post_item">
+  <div class="blognews_primary_information">
     <div class="timeline_date_range">09/01/08 - 06/30/11</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/insa-lyon-masters-degree-in-engineering-specialised-in-it.html">
     INSA Lyon (IT)</a>
         <div class="blognews_summary">
-        Masters degree in engineering specialized in IT    </div>
+        <p>Masters degree in engineering specialized in IT</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -259,7 +360,8 @@
     <div class="timeline_date_range">09/01/06 - 06/30/08</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/insa-rouen.html">
     INSA Rouen</a>
         <div class="blognews_summary">
-        Preparatory school - International Section    </div>
+        <p>Preparatory school - International Section</p>
+    </div>
       </div>
 </div>
 </div></div><div class="timeline_category timeline_category_level_2"><h3>Online and MOOCs</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
@@ -267,7 +369,8 @@
     <div class="timeline_date_range">05/04/13 - 06/18/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/university-of-washington-coursera-computational-neuroscience.html">
     University of Washington - coursera: Computational Neuroscience</a>
         <div class="blognews_summary">
-        Neurobiology, Neural encoding, decoding and modeling (grade: 97%)    </div>
+        <p>Neurobiology, Neural encoding, decoding and modeling (grade: 97%)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -275,7 +378,8 @@
     <div class="timeline_date_range">02/16/13 - 03/12/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/the-university-of-edinburgh-coursera-artificial-intelligence-planning.html">
     The University Of Edinburgh - coursera: Artificial Intelligence Planning</a>
         <div class="blognews_summary">
-        Artificial Intelligence, A*, PDDL (grade: 98%)    </div>
+        <p>Artificial Intelligence, A*, PDDL (grade: 98%)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -283,7 +387,8 @@
     <div class="timeline_date_range">02/10/13 - 03/17/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/stanford-coursera-algorithms-part-1.html">
     Stanford - coursera: Algorithms Part 1</a>
         <div class="blognews_summary">
-        Algorithms : Design and Analysis (grade: 97%)    </div>
+        <p>Algorithms : Design and Analysis (grade: 97%)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -291,7 +396,8 @@
     <div class="timeline_date_range">02/17/12 - 04/13/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/berkeley-coursera-saas.html">
     Berkeley - coursera : SaaS</a>
         <div class="blognews_summary">
-        Software engineering and Ruby on Rails (grade: 73%)    </div>
+        <p>Software engineering and Ruby on Rails (grade: 73%)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -299,7 +405,8 @@
     <div class="timeline_date_range">10/10/11 - 01/10/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/stanford-machine-learning.html">
     Stanford - coursera : Machine learning</a>
         <div class="blognews_summary">
-        Linear regression, Neural Networks, PCA (grade: 100%)    </div>
+        <p>Linear regression, Neural Networks, PCA (grade: 100%)</p>
+    </div>
       </div>
 </div>
 </div></div></div><div class="timeline_category timeline_category_level_1"><h2>Contests</h2><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
@@ -307,7 +414,8 @@
     <div class="timeline_date_range">04/01/13 - 04/29/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/nasa-tournament-lab-robonaut-challenge-and-extension-2nd-and-1st-place.html">
     Nasa Tournament Lab - Robonaut Challenge: 2nd and 1st place</a>
         <div class="blognews_summary">
-        International TopCoder marathon challenge (1190 registered, 40 competitors)    </div>
+        <p>International TopCoder marathon challenge (1190 registered, 40 competitors)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -315,7 +423,8 @@
     <div class="timeline_date_range">01/21/13 - 02/06/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/nasa-tournament-lab-longeron-challenge-17th-place.html">
     Nasa Tournament Lab - Longeron Challenge: 17th place</a>
         <div class="blognews_summary">
-        International TopCoder marathon challenge (4056 registered, 459 competitors)    </div>
+        <p>International TopCoder marathon challenge (4056 registered, 459 competitors)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -323,7 +432,8 @@
     <div class="timeline_date_range">11/01/12 - 12/01/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/github-game-off-1st-place.html">
     Github game off: 1st place</a>
         <div class="blognews_summary">
-        International game creation contest (1300 registered, 200 competitors)    </div>
+        <p>International game creation contest (1300 registered, 200 competitors)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -331,7 +441,8 @@
     <div class="timeline_date_range">03/26/12 - 04/14/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/nasa-tournament-lab-6th-place-in-uspto-algorithm-chalenge.html">
     Nasa Tournament Lab - USPTO Algorithm chalenge: 6th place</a>
         <div class="blognews_summary">
-        International TopCoder marathon challenge (150 registered, 28 competitors)    </div>
+        <p>International TopCoder marathon challenge (150 registered, 28 competitors)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -339,7 +450,8 @@
     <div class="timeline_date_range">02/10/11 - 05/15/11</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/infotel-2nd-price-in-mobile-application-contest.html">
     Infotel Mobile Application contest: 2nd price</a>
         <div class="blognews_summary">
-        National student contest (15 competitor teams)    </div>
+        <p>National student contest (15 competitor teams)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -347,7 +459,8 @@
     <div class="timeline_date_range">01/15/10 - 05/15/10</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/infotel-1st-price-in-web-application-contest.html">
     Infotel Web Application contest: 1st price</a>
         <div class="blognews_summary">
-        National student contest (15 competitor teams)    </div>
+        <p>National student contest (15 competitor teams)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -355,39 +468,28 @@
     <div class="timeline_date_range">02/01/08 - 06/15/08</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/insa-rouen-it-contest.html">
     INSA Rouen IT contest: 1st price</a>
         <div class="blognews_summary">
-        Preparatory school IT contest (20 competitors)    </div>
+        <p>Preparatory school IT contest (20 competitors)</p>
+    </div>
       </div>
 </div>
 </div></div><div class="timeline_category timeline_category_level_1"><h2>Professional</h2><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
-    <div class="timeline_date_range">Since 10/01/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/novius-fuelphp-trainer.html">
-    Novius: FuelPHP trainer</a>
+    <div class="timeline_date_range">Since 10/01/14</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/ifp,-mines-paristech-computer-vision-phd-thesis.html">
+    IFP, Mines Paristech : Computer Vision PhD thesis</a>
         <div class="blognews_summary">
-        Lyon, France<br />
-FuelPHP is an open-source PHP framework, using the latest technologies<br />
-I performed trainings inside my company and sold to other companies (through the Human-Coder website)    </div>
+        <p>Research engineer, Ph.D. degree in Computer Vision (Mathematical Morphology)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
-    <div class="timeline_date_range">Since 01/01/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/novius-novius-os.html">
-    Novius - R&amp;D engineer: Novius OS</a>
+    <div class="timeline_date_range">12/02/10 - 12/31/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/novius-reso-nova-and-novius-os.html">
+    Novius - R&amp;D engineer: Reso-nova, Novius OS and FuelPHP trainer</a>
         <div class="blognews_summary">
-        Lyon, France<br />
-Open-source content management system / framework<br />
-Design, debug, implementation, functionality improvements, public documentation, functional testing, code reviews, trainer<br />
-HTML, PHP, FuelPHP, HMVC, mysql, jquery, wijmo,    </div>
-      </div>
-</div>
-<div class="blognews_post blognews_post_item">
-  <div class="blognews_primary_information">
-    <div class="timeline_date_range">12/02/10 - 12/24/11</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/novius-reso-nova-and-novius-os.html">
-    Novius - R&amp;D engineer: Reso-Nova</a>
-        <div class="blognews_summary">
-        Lyon, France<br />
-Community management system<br />
-Design, implemented from the start, functionnality improvements, lead developer<br />
-HTML, PHP, mysql, javascript, jquery    </div>
+        <p>Lyon, France<br />
+Design, debug, implementation, functionality improvements, public documentation, functional testing, code reviews, trainer.<br />
+HTML, PHP, FuelPHP, MySQL, javascript, jQuery</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -395,10 +497,11 @@ HTML, PHP, mysql, javascript, jquery    </div>
     <div class="timeline_date_range">06/01/10 - 09/30/10</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/safecoms-peppercan-crm.html">
     Safecoms - Developper: Peppercan CRM</a>
         <div class="blognews_summary">
-        Bangkok, Thailand<br />
+        <p>Bangkok, Thailand<br />
 Customer relationship management system<br />
 Debugging, performance and functionality improvement, consultant<br />
-HTML, HAML, Ruby on rails, HMVC, mysql, javascript, jquery, CSS, git    </div>
+HTML, HAML, Ruby on rails, HMVC, mysql, javascript, jquery, CSS, git</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -406,17 +509,28 @@ HTML, HAML, Ruby on rails, HMVC, mysql, javascript, jquery, CSS, git    </div>
     <div class="timeline_date_range">06/15/09 - 08/03/09</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/game-developper-lumai-prod.html">
     Lumai prod - game developper</a>
         <div class="blognews_summary">
-        Bangkok, Thailand<br />
+        <p>Bangkok, Thailand<br />
 Debugging, performance and functionality improvement<br />
-Unity, Wii, C#, javascript, UnityScript    </div>
+Unity, Wii, C#, javascript, UnityScript</p>
+    </div>
       </div>
 </div>
-</div></div><div class="timeline_category timeline_category_level_1"><h2>Conferences</h2><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
+</div></div><div class="timeline_category timeline_category_level_1"><h2>Events, conferences and publications</h2><div class="timeline_category_items"></div><div class="timeline_category timeline_category_level_2"><h3>Publications</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
+  <div class="blognews_primary_information">
+    <div class="timeline_date_range">05/01/14 - 02/15/15</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/book-fuelphp-application-development-blueprints.html">
+    Book : FuelPHP Application Development Blueprints</a>
+        <div class="blognews_summary">
+        <p>Technical book about FuelPHP, Packt Publishing, 284 pages</p>
+    </div>
+      </div>
+</div>
+</div></div><div class="timeline_category timeline_category_level_2"><h3>Conferences</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
     <div class="timeline_date_range">11/30/12 - 11/30/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/nantes-fuelphp-a-framework-yes-automagic-no.html">
     PHP Tour Nantes: FuelPHP - A framework, yes &ndash; Automagic, no!</a>
         <div class="blognews_summary">
-        Technical conference at the PHP Tour event in Nantes (in french)    </div>
+        <p>Technical conference at the PHP Tour event in Nantes (in french)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -424,15 +538,17 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">07/10/12 - 07/10/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/rmll-fuelphp-a-framework-yes-automagic-no.html">
     RMLL: FuelPHP - A framework, yes &ndash; Automagic, no!</a>
         <div class="blognews_summary">
-        Technical conference at the Libre Software Meeting event in Geneva (in french)    </div>
+        <p>Technical conference at the Libre Software Meeting event in Geneva (in french)</p>
+    </div>
       </div>
 </div>
-</div></div><div class="timeline_category timeline_category_level_1"><h2>Events</h2><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
+</div></div><div class="timeline_category timeline_category_level_2"><h3>Events</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
     <div class="timeline_date_range">11/23/12 - 11/25/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/game-dev-party-3.html">
     Game Dev Party 3</a>
         <div class="blognews_summary">
-            </div>
+        <p></p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -440,7 +556,8 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">03/23/12 - 03/25/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/game-dev-party-2.html">
     Game Dev Party 2</a>
         <div class="blognews_summary">
-            </div>
+        <p></p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -448,39 +565,17 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">06/24/11 - 06/26/11</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/game-dev-party-1.html">
     Game Dev Party 1</a>
         <div class="blognews_summary">
-            </div>
+        <p></p>
+    </div>
       </div>
 </div>
-</div></div><div class="timeline_category timeline_category_level_1"><h2>Side projects</h2><div class="timeline_category_items"></div><div class="timeline_category timeline_category_level_2"><h3>Games</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
-  <div class="blognews_primary_information">
-    <div class="timeline_date_range">11/15/10 - 10/15/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/unlimited-galaxy.html">
-    Unlimited Galaxy</a>
-        <div class="blognews_summary">
-            </div>
-      </div>
-</div>
-<div class="blognews_post blognews_post_item">
-  <div class="blognews_primary_information">
-    <div class="timeline_date_range">03/05/09 - 10/15/09</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/spaceshadows-online.html">
-    Spaceshadows - online</a>
-        <div class="blognews_summary">
-            </div>
-      </div>
-</div>
-<div class="blognews_post blognews_post_item">
-  <div class="blognews_primary_information">
-    <div class="timeline_date_range">11/15/08 - 02/10/09</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/spaceshadows.html">
-    Spaceshadows</a>
-        <div class="blognews_summary">
-            </div>
-      </div>
-</div>
-</div></div><div class="timeline_category timeline_category_level_2"><h3>Web</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
+</div></div></div><div class="timeline_category timeline_category_level_1"><h2>Side projects</h2><div class="timeline_category_items"></div><div class="timeline_category timeline_category_level_2"><h3>Web</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
     <div class="timeline_date_range">01/15/13 - 01/19/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/sdrdis_book.html">
     sdrdis_book</a>
         <div class="blognews_summary">
-        Novius OS book viewer    </div>
+        <p>Novius OS book viewer</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -488,23 +583,8 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">01/12/13 - 01/13/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/sdrdis_timeline.html">
     sdrdis_timeline</a>
         <div class="blognews_summary">
-        Novius OS timeline viewer and manager    </div>
-      </div>
-</div>
-<div class="blognews_post blognews_post_item">
-  <div class="blognews_primary_information">
-    <div class="timeline_date_range">01/12/13 - 01/12/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/sdrdis_datetime.html">
-    sdrdis_datetime</a>
-        <div class="blognews_summary">
-        Novius OS date and time picker    </div>
-      </div>
-</div>
-<div class="blognews_post blognews_post_item">
-  <div class="blognews_primary_information">
-    <div class="timeline_date_range">01/13/13 - 01/13/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/sdrdis_color.html">
-    sdrdis_color</a>
-        <div class="blognews_summary">
-        Novius OS color picker    </div>
+        <p>Novius OS timeline viewer and manager</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -512,7 +592,8 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">01/10/13 - 01/10/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/sdrdis_templates_midnight.html">
     sdrdis_templates_midnight</a>
         <div class="blognews_summary">
-        Novius OS template    </div>
+        <p>Novius OS template</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -520,15 +601,17 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">01/04/13 - 01/04/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/guard-templates-jshaml.html">
     guard-templates-jshaml</a>
         <div class="blognews_summary">
-        Watch jshaml files and compiles them into valid javascript functions    </div>
+        <p>Watch jshaml files and compiles them into valid javascript functions</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
-    <div class="timeline_date_range">12/25/12 - 12/26/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/html_to_js.html">
+    <div class="timeline_date_range">12/26/12 - 12/27/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/html_to_js.html">
     haml_to_js</a>
         <div class="blognews_summary">
-        Ruby library and command line that converts haml to javascript    </div>
+        <p>Ruby library and command line that converts haml to javascript</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -536,7 +619,8 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">12/24/12 - 12/26/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/haml_to_star.html">
     haml_to_star</a>
         <div class="blognews_summary">
-        Ruby library which provides an API to transform haml to any language    </div>
+        <p>Ruby library which provides an API to transform haml to any language</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -544,7 +628,8 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">12/15/11 - 12/16/11</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/agenda.html">
     Agenda</a>
         <div class="blognews_summary">
-        Small address book based on FuelPHP    </div>
+        <p>Small address book based on FuelPHP</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -552,7 +637,8 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">06/15/12 - 06/30/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/jquery.earth-3d.js.html">
     jquery.earth-3d.js</a>
         <div class="blognews_summary">
-        Open-source jQuery UI plugin that allows you to display a 3D earth (or any planet)    </div>
+        <p>Open-source jQuery UI plugin that allows you to display a 3D earth (or any planet)</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -560,16 +646,36 @@ Unity, Wii, C#, javascript, UnityScript    </div>
     <div class="timeline_date_range">05/08/12 - 05/08/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/jquery.serialize-hash.html">
     jquery.serialize-hash</a>
         <div class="blognews_summary">
-        JQuery plugin that returns a hash from serialization of a form    </div>
+        <p>JQuery plugin that returns a hash from serialization of a form</p>
+    </div>
       </div>
 </div>
-</div></div></div><div class="timeline_category timeline_category_level_1"><h2>Major contributions</h2><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
+</div></div><div class="timeline_category timeline_category_level_2"><h3>Games</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
   <div class="blognews_primary_information">
-    <div class="timeline_date_range">01/04/13 - 01/04/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/guard-templates.html">
+    <div class="timeline_date_range">03/05/09 - 10/15/09</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/spaceshadows-online.html">
+    Spaceshadows - online</a>
+        <div class="blognews_summary">
+        <p></p>
+    </div>
+      </div>
+</div>
+<div class="blognews_post blognews_post_item">
+  <div class="blognews_primary_information">
+    <div class="timeline_date_range">11/15/08 - 02/10/09</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/spaceshadows.html">
+    Spaceshadows</a>
+        <div class="blognews_summary">
+        <p></p>
+    </div>
+      </div>
+</div>
+</div></div><div class="timeline_category timeline_category_level_2"><h3>Major contributions</h3><div class="timeline_category_items"><div class="blognews_post blognews_post_item">
+  <div class="blognews_primary_information">
+    <div class="timeline_date_range">01/03/13 - 01/04/13</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/guard-templates.html">
     guard-templates</a>
         <div class="blognews_summary">
-        Guard extension (ruby) allowing to compiles templates to javascript<br />
-Added core functionalities and a new extension    </div>
+        <p>Guard extension (ruby) allowing to compiles templates to javascript<br />
+Added core functionalities and a new extension</p>
+    </div>
       </div>
 </div>
 <div class="blognews_post blognews_post_item">
@@ -577,16 +683,26 @@ Added core functionalities and a new extension    </div>
     <div class="timeline_date_range">10/20/12 - 10/28/12</div>        <a class="blognews_title" href="http://sebastien.drouyer.com/projects/jugglingdb.html">
     jugglingdb</a>
         <div class="blognews_summary">
-        NodeJS ORM<br />
-Added core functionalities and testings    </div>
+        <p>NodeJS ORM<br />
+Added core functionalities and testings</p>
+    </div>
       </div>
 </div>
-</div></div>    </div>
+</div></div></div>    </div>
 </div>
-    </section>
-
 </div>
-<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+	 <div class='div_layout col-md-1'
+                 style='' data-val=0> </div>            </div>
+        </div>
+        <br>
+     </div>
+    </div>
+<div id="footer" class="row footer customisable middle-header-fixed">
+    <div class="footer_menu">
+<ul class="nav nav-pills nav-justified" style="text-align: left">    </div>
 
+    <div class="footer_text"><p>© Sébastien Drouyer. Except specified otherwise, all this website content is under&nbsp;<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA 3.0</a>.</p>    </div>
+</div>
+</div>
 </body>
 </html>
