@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+<base href="http://sebastien.drouyer.com/" />
+<title>FuelPHP basics</title>
+<meta name="robots" content="index,follow">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+            <link title="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/skin/Bootstrap.css" rel="stylesheet" type="text/css"
+              href="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/skin/Bootstrap.css">
+        <link rel="stylesheet"
+          href="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/social-buttons-3.css">
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css"
+          data-local="static/apps/noviusos_template_bootstrap/vendor/css/jquery-ui.css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"
+          data-local="static/apps/noviusos_template_bootstrap/vendor/bootstrap/css/font-awesome.css">
+
+    <!-- Fallback Jquery -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery ||
+        document.write('<script src="static/apps/noviusos_template_bootstrap/vendor/js/jquery.min.j">\x3C/script>');
+    </script>
+
+    <!-- Fallback Jquery UI-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery.ui ||
+        document.write('<script src="static/apps/noviusos_template_bootstrap/vendor/js/jquery-ui.min.j">\x3C/script>');
+    </script>
+
+    <!-- Fallback Bootstrap.js-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $.fn.modal || document.write('<script src="static/apps/noviusos_template_bootstrap/vendor/' +
+            'bootstrap/js/bootstrap.min.js">\x3C/script>');
+    </script>
+
+    <script src="static/apps/noviusos_template_bootstrap/vendor/bootstrap/js/less-1.7.0.min.js"></script>
+    <script src="static/apps/noviusos_template_bootstrap/js/script.js"></script>
+    <script src="static/plugins/google-code-prettify/run_prettify.js"></script>
+
+    <style>
+        @import 'static/website.css';    </style>
+
+<meta name="google-site-verification" content="DWVEKgPu8x-IXuT1UKwTIHa0aAjSyf6Emm7zot0yMtc" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60509693-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+<body id="principal"
+      class="customisable title_page"
+    >
+
+<div id="content" class="container-fluid">
+    <div class="head_content row header-fixed">
+    <nav class="navbar navbar-inverse " role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="sitename"
+               href="http://sebastien.drouyer.com/"
+                ><span id="header-logo-small" class="image_small" style=" display : none"> <img src=""></span><span id="header-title-small" class="title_small" style="">Sébastien Drouyer</span></a>
+            <button class="navbar-toggle collapsed right" data-target=".navbar-collapse" data-toggle="collapse"
+                    type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="container collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" id="list-menu">
+    <li class="lvl0"><a href="http://sebastien.drouyer.com/projects.html">Projects</a></li><li class="lvl0"><a href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">Tutorial: building your first FuelPHP application</a></li>    </ul>
+            </div>
+
+    </nav>
+    <div id="header" class="nav-logo customisable title_header">
+        <a href="#" style="display: inline-block;"><span id="header-logo" class="image " style="display : none ;" > <img src=""></span></a>
+
+        <span class="titleonly">
+            <a class="link-title" href="#" style="display: inline-block;"><span id="header-title" style="">Sébastien Drouyer</span><br>
+            <span id="header-baseline" style=""> </span></a>
+        </span>
+    </div>
+</div>
+
+
+
+
+
+<div  class="row middle-header-fixed ">
+         <div id="middle_content" class=" col-md-12 col-sm-9 col-xs-12" >
+            <div id="block-grid" class=" customisable col-md-12 col-sm-12 col-xs-12 main_wysiwyg">
+            <div id="grid_content_layout">
+            <style>
+    .div_layout {
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+
+    .layout {
+        padding: 0;
+    }
+</style>
+
+	 <div class='div_layout col-md-3'
+                 style='' data-val=0> </div>
+	 <div class='div_layout col-md-6'
+                 style='' data-val=3> <div style="margin-top: 10px; margin-bottom: 30px; overflow: hidden;"><a style="float: left;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/installing-the-environment.html">« IV. Installing the environment</a><a style="float: right;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/building-your-first-application.html">VI. Building your first application »</a><br><a href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">« Table of contents</a></div>
+<h1>V. FuelPHP basics</h1>
+<p>Now that we have installed a working version of FuelPHP, let's analyze, on a very basic level, how the framework works. We won't go into the details here; the idea is to only understand the necessary information to use the framework. In this section, you are recommended to follow and check our explanations on your installed instance; don't hesitate to explore files and folders, this will make you more comfortable when we will begin our project's implementation. In this section, we will approach the following:</p>
+<ul>
+<li>The FuelPHP file system hierarchy</li>
+<li>MVC, HMVC, and how it works on FuelPHP</li>
+<li>The oil utility</li>
+</ul>
+<h2>The FuelPHP file system hierarchy</h2>
+<p>Let's dive into the directory where we have installed FuelPHP. You might want to follow along using a file browser. As this book is being written, the current version of FuelPHP has the following directory hierarchy:</p>
+<ul>
+<li><code>/docs</code>: contains an HTML version of the framework documentation</li>
+<li><code>/fuel</code>, which contains:
+<ul>
+<li><code>/fuel/app</code>: Everything related to your application. This is where you will work most of the time. We will look into this directory in the upcoming <em>The app directory</em> section.</li>
+<li><code>/fuel/core</code>: The core classes and configuration. You should not change anything inside it, unless of course you want to contribute to the FuelPHP core.</li>
+<li><code>/fuel/packages</code>: Packages are core extensions, they are bundles containing reusable classes and configuration files. Using the FuelPHP default configuration, this is the only directory where you can install packages (your own as well as from external sources). Notice that there are already five installed packages. We will use each of them in this book.</li>
+<li><code>/vendor</code>: This directory contains third-party packages and libraries that are generally not FuelPHP-specific.</li>
+</ul>
+</li>
+<li><code>/public</code>: This directory is accessible by external visitors. You want to put here files publicly available, as CSS or JS files for instance.</li>
+</ul>
+<h3>The app directory</h3>
+<p>As written earlier, the app directory is where you will work most of the time. Thus, you should be familiar with its hierarchy, which is given as follows:</p>
+<ul>
+<li><code>/cache</code>: This directory is used to store cache files that improve your application's performance.</li>
+<li><code>/classes</code>: Classes used by your application:
+<ul>
+<li><code>/classes/controller</code>: Where you have to implement your controllers (see the <em>MVC, HMVC, and how it works on FuelPHP</em> section)</li>
+<li><code>/classes/model</code>: Where you have to implement your models (see the <em>MVC, HMVC, and how it works on FuelPHP</em> section)</li>
+<li><code>/classes/presenter</code>: Where you have to implement your presenters (see the <em>MVC, HMVC, and how it works on FuelPHP</em> section).</li>
+</ul>
+</li>
+<li><code>/config</code>: Every configuration file. Since some files are important, we will list them as well:
+<ul>
+<li><code>/config/config.php</code>: Defines important FuelPHP configuration items such as activated packages or security settings.</li>
+<li><code>/config/db.php</code>: Defines database connection information.</li>
+<li><code>/config/routes.php</code>: Defines the application's routes (we will<br>approach them later in this chapter).</li>
+<li><code>/config/development</code>, <code>config/production</code>, <code>config/staging</code>, <code>config/test</code>: All configuration files in the <code>config/ENV</code> directory, <code>ENV</code> being the current environment, are merged with the ones in the <code>config</code> folder. For instance, if the FuelPHP environment is set to <code>development</code> (as it is by default), the <code>config/development/db.php</code> file will be recursively merged with the <code>config/db.php</code> file. In concrete terms, this means that configuration items defined in the <code>config/ENV/db.php</code> file overwrite those in the <code>config/db.php</code> file. We will illustrate this through an example in <em>The oil utility and the oil console</em> section.</li>
+</ul>
+</li>
+<li><code>/lang</code>: Contains the translation files.</li>
+<li><code>/logs</code>: Contains the log files. The log file path depends on the day it is written. For instance, if you log a message on July 1, 2015, it will be saved in the file located in <code>logs/2015/07/01.php</code>.</li>
+<li><code>/migrations</code>: Contains the migration files, which allow you to easily alter your database in a structured manner. For instance, if many people are working on the same project, or if there are many instances of the same project (development/production), they make the database change easier. We will often use them in the book.</li>
+<li><code>/modules</code>: Contains your application's modules. Each module can be described as a bundle of code that can respond to requests and be easily reused on other projects. We will create a module for the blog project in <em>Chapter 3, Building a Blog Application</em>.</li>
+<li><code>/tasks</code>: Contains task files, which are classes that can be executed from the command line (for cron jobs for instance).</li>
+<li><code>/tests</code>: Contains test files, which can be used to automatically test your application. We will approach them in <em>Chapter 5, Building Your Own RESTful API</em>, to test our application.</li>
+<li><code>/tmp</code>: Contains temporary files.</li>
+<li><code>/vendor</code>: This directory contains third-party libraries and packages only used by your application.</li>
+<li><code>/views</code>: Contains the view files used by your application (see the <em>MVC, HMVC, and how it works on FuelPHP</em> section).</li>
+</ul>
+<h3>The packages</h3>
+<p>The <code>fuel/packages</code> directory contains five default packages that, when activated, can add interesting features to FuelPHP:</p>
+<ul>
+<li>The <code>auth</code> package provides a standardized interface for user authentication. We will use this package in <em>Chapter 5, Building Your Own RESTful API</em>.</li>
+<li>The <code>email</code> package provides an interface to send e-mails using different drivers. We will use this package in <em>Chapter 3, Building a Blog Application</em>.</li>
+<li>The <code>oil</code> package allows you to speed up your application's implementation by generating code files, launching tests and tasks, or providing a CLI PHP console. We will use this package in all chapters and we will explore its features in <em>The oil utility and the oil console</em> section.</li>
+<li>The <code>orm</code>: This package is an improvement of the FuelPHP's core models; it allows them to fetch complex queries and to define the relations between them. We will use this package in <em>Chapter 2, Building a To-do List Application</em>.</li>
+<li>The <code>parser</code>: This package allows your application to render view files in common template systems such as Twig or Smarty. We will use this package in <em>Chapter 5, Building Your Own RESTful API</em>.</li>
+</ul>
+<p>We will also create our own package in <em>Chapter 4, Creating and Using Packages</em>.</p>
+<h3>Class name, paths, and coding standard</h3>
+<p>In FuelPHP, there are five constants that define the location of the most important directories as follows:</p>
+<ul>
+<li><strong><code>APPPATH</code></strong>: The application directory (<code>fuel/app</code>)</li>
+<li><strong><code>COREPATH</code></strong>: The core directory (<code>fuel/core</code>)</li>
+<li><strong><code>PKGPATH</code></strong>: The packages directory (<code>fuel/packages</code>)</li>
+<li><strong><code>DOCROOT</code></strong>: The public directory (<code>public</code>)</li>
+<li><strong><code>VENDORPATH</code></strong>: The vendor directory (<code>fuel/vendor</code>)</li>
+</ul>
+<p>You are recommended to read the official documentation about these constants at <a href="http://fuelphp.com/docs/general/constants.html" target="_blank">http://fuelphp.com/docs/general/constants.html</a> (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | FuelPHP | General | Constants</strong>)</p>
+<p>Please keep in mind, that we will often use these constants in the book to shorten file paths.</p>
+<p>An interesting point is that FuelPHP allows you to change quite easily the folder structure: for instance, you can change in the <code>public/index.php</code> file the value of the constants that we just introduced, or you can change the directory where FuelPHP will load modules by changing the <code>module_paths</code> key in the <code>APPPATH/config/config.php</code> configuration file.</p>
+<p>You might also have noticed that class names are related to their own path, as given in the following:</p>
+<ul>
+<li>In the app directory, the <code>classes/controller/welcome.php</code> class is named <code>Controller_Welcome</code></li>
+<li>The <code>classes/model/welcome.php</code> class is named <code>Model_Welcome</code></li>
+<li>You can notice that classes are named the same way in the <code>fuel/core</code> directory</li>
+</ul>
+<p>This result was not achieved by accident; FuelPHP follows by default the PSR- 0 standard. You are recommended to read the official documentation about this standard at <a href="http://www.php-fig.org/psr/psr-0/" target="_blank">http://www.php-fig.org/psr/psr-0/</a>.</p>
+<h2>MVC, HMVC, and how it works on FuelPHP</h2>
+<p>We will now look into one major aspect of the FuelPHP framework – the MVC and HMVC software architecture patterns.</p>
+<h3>What is MVC?</h3>
+<p><strong>Model-view-controller (MVC)</strong> is a software architecture pattern that states that the code should be separated in three categories: models, views, and controllers.</p>
+<p>For those who are not familiar with it, let's illustrate this through an example:</p>
+<p><img class="" style="display: block; margin-left: auto; margin-right: auto;" title="Mvc" src="http://sebastien.drouyer.com/cache/media/fuelphp-book/mvc/s%2C500%2C224-1d620b.png" alt="Mvc" height="224" width="500"></p>
+<p>Suppose a user tries to access your website. The following are some URLs he/she might request:</p>
+<p><a href="http://my.app/" target="_blank">http://my.app/</a><br><a href="http://my.app/welcome/" target="_blank">http://my.app/welcome/</a><br><a href="http://my.app/welcome/hello" target="_blank">http://my.app/welcome/hello</a></p>
+<p>Depending on the requested URL, your website is generally expected to return some HTML code and it also sometimes needs to update the database, for instance when you want to save the users' comments.</p>
+<p>The returned HTML code is generated by the views, because this is what is received by the browser and indirectly seen by the user.</p>
+<p>The database is generally updated through models. In concrete terms, instead of executing raw SQL code to access and update the database, the best practice is to use classes and instances to do so. Each class represents a model that is related to a specific table: for example, the <code>car</code> model would access the <code>cars</code> table. Each class' instance is a model instance linked to a specific row in a table: for example, your car's information can be saved as a <code>car</code> instance that will be linked to a specific row in the <code>cars</code> table. As we use classes instead of raw SQL code, the framework has already implemented frequently needed features such as reading, creating, saving, or deleting model's instances. A further advantage is that, as we used packaged and well-implemented methods to access our database, it can prevent most unintended security breaches that we can create when requesting the database using raw SQL.</p>
+<p>The controllers allow the website to handle the user's request by selecting the correct view to send back (the response) and updating the database (through models) if necessary. Controllers handle a specific section of the website: for instance, the <code>car</code> controller will handle everything that is related to cars. Controllers are subdivided by actions that will handle specific features: for instance, the <code>list</code> action of the <code>car</code> controller will return a list of cars in HTML code. In practice, controllers are classes and actions are methods.</p>
+<p>When the user requests a URL, the framework will select an action inside a controller to handle it. Those are generally chosen by convention; for instance, when requesting <a href="http://my.app/welcome/hello" target="_blank">http://my.app/welcome/hello</a>, the framework will choose the <code>hello</code> action inside the <code>welcome</code> controller. Sometimes, they can also be chosen using a routes configuration file that matches URLs to actions and controllers.</p>
+<p>The views sometimes need to access models; for example, we need to access the <code>car</code> model's instances when we want to display a list of cars. However, views should never update models or the database; only the controllers and preferably models should do that.</p>
+<p>Please note that additional code components as helpers or presenters can be added to ease the development process, but if you understood this section, you got the most important points.</p>
+<h3>How it works on FuelPHP</h3>
+<p>Let's illustrate how it works by testing our newly created website. We suppose that your application is available at the following URL:</p>
+<p><a href="http://my.app/" target="_blank">http://my.app/</a></p>
+<h4>Actions and controllers</h4>
+<p>If you request a random URL, you will probably get a 404 exception. For instance:</p>
+<p><a href="http://my.app/should_display_404" target="_blank">http://my.app/should_display_404</a></p>
+<p>But, if you request the following URL, you will display the same page as the home page:</p>
+<p><a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a></p>
+<p>If you request the following URL, you will display a different page:</p>
+<p><a href="http://my.app/welcome/hello" target="_blank">http://my.app/welcome/hello</a></p>
+<p>Let's first explain how the last two requests worked. You can notice that both URLs contain the <em>welcome</em> word just after the base URL. You can also find this word in the file name <code>fuel/app/classes/controller/welcome.php</code>; it turns out that <em>welcome</em> is a controller. Now, open this file using your preferred text editor. You will then read the following:</p>
+<pre class="prettyprint lang-php">//...<br>class Controller_Welcome extends Controller<br>{<br>&nbsp;&nbsp;&nbsp; //...<br>&nbsp;&nbsp;&nbsp; public function action_index()<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //...<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; //...<br>&nbsp;&nbsp;&nbsp; public function action_hello()<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //...<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; //...<br>}</pre>
+<p>You can notice the <code>action_index</code> and <code>action_hello</code> methods. These functions are called actions. Now, as you have probably guessed, when you request <a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a>, the <code>action_index</code> method will be called. In a more general manner, if you request <a href="http://my.app/CONTROLLER/ACTION" target="_blank">http://my.app/CONTROLLER/ACTION</a>, the <code>action_ACTION</code> method of the <code>CONTROLLER</code> controller will be called. Let's test that. Edit the <code>action_index</code> function to add a simple echo at the beginning:</p>
+<pre class="prettyprint lang-php">public function action_index()<br>{<br>&nbsp;&nbsp;&nbsp; echo 'Test 1 - Please never print anything inside an action';<br>&nbsp;&nbsp;&nbsp; //...<br>}
+</pre>
+<p>Now, if you request <a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a>, you will read the printed content at the beginning of the web page. Though this is an easy way to test how things work, never print anything in your action or controller. When you print a message, you are already implementing the view entity; thus, printing something in the controller breaks the MVC pattern.</p>
+<h4>Views</h4>
+<p>But then how are the pages rendered? Let's analyze the only line of code in our <code>index</code> action:</p>
+<pre class="prettyprint lang-php">public function action_index()<br>{<br>&nbsp;&nbsp;&nbsp; return Response::forge(View::forge('welcome/index'));<br>}
+</pre>
+<p><code>View::forge('welcome/index')</code> returns a <code>View</code> object generated from the <code>fuel/app/views/welcome/index.php</code> view file. We will use this function a lot in this chapter and this book, and will cover all its parameters, but you can read its official documentation in the FuelPHP website:</p>
+<p><a href="http://fuelphp.com/docs/classes/view.html#/method_forge" target="_blank">http://fuelphp.com/docs/classes/view.html#/method_forge</a>. (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | Core | View</strong>)</p>
+<p><code>Response::forge(View::forge('welcome/index'));</code> returns a response object created from the <code>View</code> object. Additional parameters allow us to change headers or the page status. A response object contains all the necessary information that will be sent to the browser: the headers and the body (generally the HTML code). You are recommended to read the official documentation on the FuelPHP website at <a href="http:// fuelphp.com/docs/classes/response.html#method_forge" target="_blank">http:// fuelphp.com/docs/classes/response.html#method_forge</a> (It can be accessed through the FuelPHP website navigating to <strong>DOCS | TABLE OF CONTENTS | Core | Response</strong>)</p>
+<p>Since the view is generated from the <code>fuel/app/views/welcome/index.php</code> file, open it to discover its content. You can notice that this is the same HTML code as the one displayed when requesting the URL. Just after <code>&lt;h1&gt;Welcome!&lt;/h1&gt;</code>, add <code>&lt;p&gt;This is my first view change.&lt;/p&gt;</code>. Now, if you refresh your browser, you will see this message appear under the <strong>Welcome!</strong> title.</p>
+<h4>Parameters</h4>
+<p>It is possible to indicate parameters, both to the actions and to the views. For instance, replace your <code>index</code> action by the following code:</p>
+<pre class="prettyprint lang-php">public function action_index($name = 'user', $id = 0)<br>{<br>&nbsp;&nbsp;&nbsp; return Response::forge(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View::forge(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     'welcome/index',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; array(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'name' =&gt; $name,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'id' =&gt; $id,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )<br>&nbsp;&nbsp;&nbsp; );<br>}
+</pre>
+<p>And in the <code>fuel/app/views/welcome/index.php</code> view file, replace</p>
+<pre class="prettyprint lang-php">&lt;h1&gt;Welcome!&lt;/h1&gt;</pre>
+<p>by</p>
+<pre class="prettyprint lang-php">&lt;h1&gt;Welcome &lt;?php echo ($name.' (id: '.$id.')'); ?&gt;!&lt;/h1&gt;</pre>
+<p>Now, if you request the following URL:</p>
+<p><a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a></p>
+<p>the title will display <strong>Welcome user (id: 0)!</strong></p>
+<p>If you request the following URL:</p>
+<p><a href="http://my.app/welcome/index/Jane" target="_blank">http://my.app/welcome/index/Jane</a></p>
+<p>the title will display <strong>Welcome Jane (id: 0)!</strong></p>
+<p>And if you request the following URL:</p>
+<p><a href="http://my.app/welcome/index/Jane/34" target="_blank">http://my.app/welcome/index/Jane/34</a></p>
+<p>the title will display <strong>Welcome Jane (id: 34)!</strong></p>
+<p>You might have understood that if you request the following URL:</p>
+<p><a href="http://my.app/CONTROLLER/ACTION/PARAM_1/PARAM_2/PARAM3" target="_blank">http://my.app/CONTROLLER/ACTION/PARAM_1/PARAM_2/PARAM3</a></p>
+<p>The <code>action_ACTION</code> method of <code>CONTROLLER</code> will be called with the <code>PARAM_1</code>, <code>PARAM_2</code>, and <code>PARAM_3</code> parameters. If there are less parameters defined in the URL than required in the method, either, if defined, the parameters take their default values (as illustrated previously), or, if no default value is defined, it will trigger a 404 error.</p>
+<p>You can notice that we replaced</p>
+<pre class="prettyprint lang-php">View::forge('welcome/index')</pre>
+<p>By</p>
+<pre class="prettyprint lang-php">View::forge('welcome/index', array(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'name' =&gt; $name,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'id' =&gt; $id,<br>&nbsp;&nbsp;&nbsp; )<br>)</pre>
+<p>View parameters are sent by the second parameter of <code>\View::forge</code> in an associative array. Here, the associative array has two keys, <code>name</code> and <code>id</code>, and their values are available inside the view file through the <code>$name</code> and <code>$id</code> variables.</p>
+<p>In a more general manner, if you call the following:</p>
+<pre class="prettyprint lang-php">View::forge('YOUR_VIEW', array(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'param_1' =&gt; 1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'param_2' =&gt; 2,<br>&nbsp;&nbsp;&nbsp; )<br>)
+</pre>
+<p>When the view file will be executed, parameters will be available through the <code>$param_1</code> and <code>$param_2</code> variables.</p>
+<h4>Routes</h4>
+<p>Though what we previously observed explains how the standard cases operate</p>
+<p><a href="http://my.app/CONTROLLER/ACTION" target="_blank">http://my.app/CONTROLLER/ACTION</a></p>
+<p>we haven't explained why the two following URLs return content though no associated controller and action can be found:</p>
+<p><a href="http://my.app/" target="_blank">http://my.app/</a><br><a href="http://my.app/should_display_404" target="_blank">http://my.app/should_display_404</a></p>
+<p>For understanding why we have to open the <code>fuel/app/config/routes.php</code> configuration file:</p>
+<pre class="prettyprint lang-php">&lt;?php<br>return array(<br>&nbsp;&nbsp;&nbsp; '_root_' =&gt; 'welcome/index', // The default route<br>&nbsp;&nbsp;&nbsp; '_404_' =&gt; 'welcome/404', // The main 404 route<br>&nbsp;&nbsp;&nbsp; 'hello(/:name)?' =&gt; array('welcome/hello', 'name' =&gt; 'hello'),<br>);</pre>
+<p>You can first notice the following two special keys:</p>
+<ul>
+<li><code>_root_</code>: This defines which controller and action should be called when requesting the website root URL. Note that the value is <code>welcome/index</code>, you can now understand why <a href="http://my.app" target="_blank">http://my.app</a> and <a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a> are returning the same content.</li>
+<li><code>_404_</code>: This defines which controller and action should be called when throwing a 404 error.</li>
+</ul>
+<p>Beside specials keys, you can define the custom URLs you want to handle. Let's add a simple example at the end of the array:</p>
+<pre class="prettyprint lang-php">'my/welcome/page' =&gt; 'welcome/index',</pre>
+<p>Now, if you request the following URL:</p>
+<p><a href="http://my.app/my/welcome/page" target="_blank">http://my.app/my/welcome/page</a></p>
+<p>it will display the same content as in the following URL:</p>
+<p><a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a></p>
+<p>You have probably noticed that there is also another key already defined: <code>hello(/:name)?</code>. The routing system is quite advanced, and to fully understand it you are recommended to take a look at the official documentation:</p>
+<p><a href="http://fuelphp.com/docs/general/routing.html" target="_blank">http://fuelphp.com/docs/general/routing.html</a> (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | FuelPHP | Routing</strong>)</p>
+<h4>Presenters</h4>
+<p>You might have seen that the <code>hello</code> action doesn't use the <code>View</code> class to display its content, but instead it uses the <code>Presenter</code> class:</p>
+<p>Let's analyze what is happening in this case. First, you can notice that, as for the views, a view file exists at the following path: <code>fuel/app/views/welcome/hello.php</code>. If you open this file, you will see that the code is the same as the one displayed when requesting the URL <a href="http://my.app/welcome/hello" target="_blank">http://my.app/welcome/hello</a>, except for one tiny difference. You can find the following code:</p>
+<pre class="prettyprint lang-php">&lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;!</pre>
+<p>In a normal view, we would have to define the <code>name</code> parameter, except here we didn't. Though, when displaying the web page, this parameter seems to have a defined value (it displays <strong>Hello, World!</strong>). Where could it be defined then?</p>
+<p>Probing a little further, you can find another file located at <code>fuel/app/classes/presenter/welcome/hello.php</code>. It contains the following:</p>
+<pre class="prettyprint lang-php">class Presenter_Welcome_Hello extends Presenter<br>{<br>&nbsp;&nbsp;&nbsp; //...<br>&nbsp;&nbsp;&nbsp; public function view()<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;name = $this-&gt;request()-&gt;param('name', 'World');<br>&nbsp;&nbsp;&nbsp; }<br>}</pre>
+<p>This file contains a <code>Presenter</code> class. The <code>view</code> function is called before rendering the view and it is here that the <code>name</code> parameter is set. It tries to get the name from the request parameter, <code>name</code>, but if it is not defined, the default value is <code>World</code>.</p>
+<p>If you wonder how to change this parameter, refer to the routes. For instance, request the URL <a href="http://my.app/hello/Jane" target="_blank">http://my.app/hello/Jane</a>.</p>
+<p>One could then wonder the use of <code>Presenter</code> classes, since we could change the previous code into a more classic view and controller approach.</p>
+<p>Let's show its usefulness by an illustration. Suppose you have created an internal website managing the clients of your corporation. Each client is associated to a client category. In your creation, edition, and other forms, you thus display a selectable list of client categories. Each time you display the exact same selectable list, though you access it by using different controllers and actions. You can come up with three solutions:</p>
+<ul>
+<li>You can create a classic view for your selectable list, load the list of client categories inside each of your actions, and pass this list to each view until you reach the location where you want to display your list. The problem is that it would induce a lot of code repetition.</li>
+<li>You can create a classic view and load the list of clients inside this view. This way, you wouldn't have to pass along the necessary parameter. The problem is that you would break the MVC pattern by mixing models and views.</li>
+<li>You can create a <code>Presenter</code> class, load the list inside the <code>Presenter</code> class, use it inside the view file, and display the view file using <code>Presenter::forge</code>. This solution is the best because it doesn't mix views and models but still limits the code duplication.</li>
+</ul>
+<h3>What is HMVC?</h3>
+<p>FuelPHP is a <strong>Hierarchical Model-View-Controller (HMVC)</strong> framework, meaning that it allows you to request internal controllers from your application. In concrete terms, the following code:</p>
+<pre class="prettyprint lang-php">echo Request::forge('welcome/index')-&gt;execute();</pre>
+<p>will print exactly what the following URL would return:</p>
+<p><a href="http://my.app/welcome/index" target="_blank">http://my.app/welcome/index</a></p>
+<p>Though we suggest you to use this feature in moderation, it can come handy when you want to implement and display widgets on several web pages.</p>
+<p>You are recommended to read the following resources if you want to learn more about this pattern:</p>
+<p><a href="http://en.wikipedia.org/wiki/Hierarchical_model-view-controller" target="_blank">http://en.wikipedia.org/wiki/Hierarchical_model-view-controller</a></p>
+<p><a href="http://stackoverflow.com/questions/2263416/what-is-the-hmvc-pattern" target="_blank">http://stackoverflow.com/questions/2263416/what-is-the-hmvc-pattern</a></p>
+<h3>The oil utility and the oil console</h3>
+<p>The <code>oil</code> utility is a very handy command-line tool. As the <code>rails</code> utility of Ruby on Rails, <code>oil</code> allows you to do the following:</p>
+<ul>
+<li>Easily generate code files: models, controllers, migrations, and entire scaffoldings</li>
+<li>Run tasks and migrations</li>
+<li>Easily install, update, or remove packages</li>
+<li>Test your code using PHPUnit test or a real-time console</li>
+<li>Even run a PHP-built-in web server hosting your FuelPHP application (for PHP &gt;= 5.4)</li>
+</ul>
+<p>Though we will use all these features, except the last one, in this book, we recommend that you take a look at the official documentation at:</p>
+<p><a href="http://fuelphp.com/docs/packages/oil/intro.html" target="_blank">http://fuelphp.com/docs/packages/oil/intro.html</a> (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | Oil | Introduction</strong>)</p>
+<p>In this section, we are going to use the oil console, which is an important tool if you want to test your website, or, as in this case, a FuelPHP feature.</p>
+<p>First, open your command-line utility and go to the root of your website directory. Then, enter the following line:</p>
+<pre class="prettyprint lang-bash">php oil console</pre>
+<div class="bs-callout bs-callout-warning">If you use a web development platform such as WAMP or MAMP, you are recommended to use the PHP executable inside the platform directory for launching the oil utility (it might not work otherwise). As I wrote this book, this executable is located at <code>WAMP_DIRECTORY\bin\php\phpVERSION\php.exe</code> for WAMP, and at <code>MAMP_DIRECTORY/bin/php/phpVERSION/bin/php</code> for MAMP (VERSION depends on the version of PHP you installed, the best is to check this directory by yourself using a file explorer).</div>
+<p>This will open the command-line interface oil provides. When you press <em>Enter</em>, something similar to the following should appear:</p>
+<pre class="prettyprint lang-bash">Fuel 1.7.2 - PHP 5.4.24 (cli) (Jan 19 2014 21:18:21) [Darwin]<br>&gt;&gt;&gt;</pre>
+<p>You can now type any PHP code and it will be executed. Let's start with<br>something simple:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; $a = 2</pre>
+<p>If you press <em>Enter</em>, nothing will be printed, but the <code>$a</code> variable will be set to <code>2</code>. Now, if you want to check a variable value, simply enter its name and then press <em>Enter</em>:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; $a<br>2</pre>
+<p>It also works for more complex variables:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; $a = array('a' =&gt; 'b', 'c' =&gt; 'd')<br>&gt;&gt;&gt; $a<br>array (<br>  'a' =&gt; 'b',<br>  'c' =&gt; 'd',<br>)</pre>
+<p>But be aware, that you might have trouble displaying complex objects.</p>
+<p>Let's now test a FuelPHP feature. Earlier, when discussing the <code>app</code> directory structure, we explained that the configuration files in the <code>fuel/app/config</code> directory were merged with the ones with the same filenames in the <code>fuel/app/config/ENV</code> directory, <code>ENV</code> being FuelPHP's current environment. We will now test this behavior.</p>
+<p>First, let's check FuelPHP's current environment:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; Fuel::$env<br>development</pre>
+<p>The environment should be set to <code>development</code>.</p>
+<p>Now, create a PHP file located at <code>fuel/app/config/test.php</code> where you will write:</p>
+<pre class="prettyprint lang-php">&lt;?php<br>return array(<br>&nbsp;&nbsp;&nbsp; 'this_is_the_root_config_file' =&gt; true,<br>);</pre>
+<p>Then create another PHP file located at <code>fuel/app/config/development/test.php</code> and write the following:</p>
+<pre class="prettyprint lang-php">&lt;?php<br>return array(<br>&nbsp;&nbsp;&nbsp; 'this_is_the_dev_config_file' =&gt; true,<br>);</pre>
+<p>and an additional one located at <code>fuel/app/config/production/test.php</code>, where you will write the following:</p>
+<pre class="prettyprint lang-php">&lt;?php<br>return array(<br>&nbsp;&nbsp;&nbsp; 'this_is_the_prod_config_file' =&gt; true,<br>);</pre>
+<p>Now, if you return to the command-line interface, you can load the <code>test</code> configuration file by writing the following:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; $conf = Config::load('test', true)</pre>
+<p>You are recommended to read the <code>Config::load</code> official documentation for more information at:</p>
+<p><a href="http://fuelphp.com/docs/classes/config.html#/method_load" target="_blank">http://fuelphp.com/docs/classes/config.html#/method_load</a>. (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | Core | Config</strong>)</p>
+<p>As explained before, the value returned will be a mix of the <code>fuel/app/config/test.php</code> and the <code>fuel/app/config/development/test.php</code> configuration files:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; $conf<br>array (<br>&nbsp; 'this_is_the_root_config_file' =&gt; true,<br>&nbsp; 'this_is_the_dev_config_file' =&gt; true,<br>)</pre>
+<p>If we change the FuelPHP environment to <code>production</code>:</p>
+<pre class="prettyprint lang-php">Fuel::$env = 'production'; // only do that for testing purposes</pre>
+<p>And load again the <code>test</code> configuration file:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; Config::load('test', true, true)<br>array (<br>&nbsp; 'this_is_the_root_config_file' =&gt; true,<br>&nbsp; 'this_is_the_prod_config_file' =&gt; true,<br>)</pre>
+<p>The merging will be done with the configuration file in the <code>production</code> folder.</p>
+<div class="bs-callout bs-callout-info">You have probably noticed that we added a third parameter for <code>Config::load</code>. This parameter allows you to clear the configuration cache. If we didn't set it to <code>true</code>, the method would have returned the old configuration we loaded when we were in the <code>development</code> environment.</div>
+<p>But what happens when the <code>fuel/app/config/production/test.php</code> and <code>fuel/app/config/test.php</code> configuration files contain the same key? The console can find the answer for us.</p>
+<p>Change the content of the <code>fuel/app/config/test.php</code> configuration file to the following:</p>
+<pre class="prettyprint lang-php">&lt;?php<br>return array(<br>&nbsp;&nbsp;&nbsp; 'complex_value' =&gt; array(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'root' =&gt; true,<br>&nbsp;&nbsp;&nbsp; ),<br>&nbsp;&nbsp;&nbsp; 'this_is_the_root_config_file' =&gt; true,<br>);</pre>
+<p>and change the content of the <code>fuel/app/config/production/test.php</code> configuration file to the following:</p>
+<pre class="prettyprint lang-php">&lt;?php<br>return array(<br>&nbsp;&nbsp;&nbsp; 'complex_value' =&gt; array(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'prod' =&gt; true,<br>&nbsp;&nbsp;&nbsp; ),<br>&nbsp;&nbsp;&nbsp; 'this_is_the_root_config_file' =&gt; false,<br>&nbsp;&nbsp;&nbsp; 'this_is_the_prod_config_file' =&gt; true,<br>);</pre>
+<p>Let's now reload the <code>test</code> configuration files as follows:</p>
+<pre class="prettyprint lang-php">&gt;&gt;&gt; Config::load('test', true, true)<br>array (<br>&nbsp; 'complex_value' =&gt;<br>&nbsp; array (<br>&nbsp;&nbsp;&nbsp; 'root' =&gt; true,<br>&nbsp;&nbsp;&nbsp; 'prod' =&gt; true,<br>&nbsp; ),<br>&nbsp; 'this_is_the_root_config_file' =&gt; false,<br>&nbsp; 'this_is_the_prod_config_file' =&gt; true,<br>)</pre>
+<p>It is interesting to analyze how the preceding two configuration files have been merged:</p>
+<ul>
+<li>The <code>this_is_the_root_config_file</code> key shared by the two configuration files is associated in both cases to a simple value. In the resulting configuration, it is the value from the production file that prevails.</li>
+<li>The <code>complex_value</code> key is associated in both cases to an array. The two arrays seem to have been merged in the resulting configuration.</li>
+</ul>
+<p>This is because the configuration files are not merged by the <code>array_merge</code> native PHP function, but instead by the <code>Arr::merge</code> FuelPHP function, which merges arrays recursively. You are recommended to take a look at its official documentation at <a href="http://fuelphp.com/docs/classes/arr.html#/method_merge" target="_blank">http://fuelphp.com/docs/classes/arr.html#/method_merge</a> (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | Core | Arr</strong>)</p>
+<p>It should be clear now that the console is a great tool that allows you to test your application. It can also be used as a great complement to the documentation, as you can try FuelPHP methods and their parameters without changing any files in your application.</p>
+<div style="margin-top: 30px; overflow: hidden;"><a style="float: left;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/installing-the-environment.html">« IV. Installing the environment</a><a style="float: right;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/building-your-first-application.html">VI. Building your first application »</a><br><a href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">« Table of contents</a></div></div>
+	 <div class='div_layout col-md-3'
+                 style='' data-val=0> </div>            </div>
+        </div>
+        <br>
+     </div>
+    </div>
+<div id="footer" class="row footer customisable middle-header-fixed">
+    <div class="footer_menu">
+<ul class="nav nav-pills nav-justified" style="text-align: left">    </div>
+
+    <div class="footer_text"><p>© Sébastien Drouyer. Except specified otherwise, all this website content is under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 3.0</a>.</p>    </div>
+</div>
+</div>
+</body>
+</html>

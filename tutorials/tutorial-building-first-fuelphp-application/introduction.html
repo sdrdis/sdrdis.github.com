@@ -2,7 +2,7 @@
 <html>
 <head>
 <base href="http://sebastien.drouyer.com/" />
-<title>About me</title>
+<title>Introduction</title>
 <meta name="robots" content="index,follow">
 
 
@@ -116,21 +116,28 @@
     }
 </style>
 
-	 <div class='div_layout col-md-1'
+	 <div class='div_layout col-md-3'
                  style='' data-val=0> </div>
-	 <div class='div_layout col-md-2'
-                 style='' data-val=1> <p><img class="" title="Me" src="http://sebastien.drouyer.com/cache/media/me/s%2C256%2C317-f90188.jpg" alt="Me" height="317" width="256"></p></div>
-	 <div class='div_layout col-md-1'
-                 style='' data-val=0> </div>
-	 <div class='div_layout col-md-7'
-                 style='' data-val=2> <h1>About me</h1>
-<p>Hi! My name is Sébastien Drouyer, I am a computer research scientist and published author. I am passionate about artificial intelligence, computer vision, machine learning, web technologies, software development, computer science and science in a general manner.</p>
-<p>I love to compete in computer science contests, especially those that last more than a few days. I have won several prizes in competitions organized by well known companies such as NASA (TopCoder), Intel, Github and Infotel.</p>
-<h2>Present</h2>
-<p>Since october 2014, I am working on a PhD in the field of computer vision. I am funded by IFP Energies nouvelles and work at the Mines Paristech doctoral school. The topic of my PhD thesis is "3D topography by image segmentation approach : application to scanning electron microscopy ". So far, I have a fantastic experience.</p>
-<h2>Past</h2>
-<p>I have been part of the core team of <a href="http://www.novius-os.org" target="_blank">Novius OS</a>, an open source content management system, and I contributed to the <a href="http://www.fuelphp.com" target="_blank">FuelPHP</a> framework (upon which Novius OS is based) as well as several other open source projects (<a href="https://github.com/sdrdis/hotfix" target="_blank">hotfix</a>, <a href="https://github.com/sdrdis/jquery.earth-3d" target="_blank">jquery.earth-3d</a>, <a href="http://jugglingdb.co/" target="_blank">jugglingdb</a>...). I trained several teams to FuelPHP and am a conference speaker on the subject. My experience led me to write and publish a book about this wonderful framework: <a href="http://sebastien.drouyer.com/projects/book-fuelphp-application-development-blueprints.html" target="_blank">FuelPHP Application Development Blueprints</a>.</p></div>
-	 <div class='div_layout col-md-1'
+	 <div class='div_layout col-md-6'
+                 style='' data-val=3> <div style="margin-top: 10px; margin-bottom: 30px; overflow: hidden;"><a style="float: left;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">« Table of contents</a><a style="float: right;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/about-fuelphp.html">II. About FuelPHP »</a></div>
+<h1>I. Introduction</h1>
+<p>Throughout the book, we will use the FuelPHP framework to build different types of projects. The objective of this chapter is to make you familiar with the basics of the framework and create your first project as quickly as possible. We won't create anything exceptional in this chapter and there will be very little coding, but we will go through the whole process from installing FuelPHP to publishing your project on a production server. You will learn the necessary basics for the other projects as well.</p>
+<p>By the end of the chapter, you should know the following:</p>
+<ul>
+<li>A common development process of a FuelPHP application</li>
+<li>How to install FuelPHP (the latest or a specific version)</li>
+<li>The FuelPHP file system hierarchy</li>
+<li>Two different ways to configure Apache to access your application</li>
+<li>How to configure FuelPHP to connect to a database</li>
+<li>The oil command line and how to use it for scaffolding your application</li>
+<li>How does an application respond to a URL requested by a visitor</li>
+<li>What are the FuelPHP templates</li>
+<li>How to publish your project to a host</li>
+</ul>
+<p>Since this book is intended for intermediate developers, we will assume that you have already installed Apache and MySQL on your system. Some prior knowledge of Git and Composer is an added advantage as you might need it, but you should be fine in this book if you are not familiar with these tools. However, for advanced applications that need collaboration between several developers mastering them is highly recommended.</p>
+<p>In this chapter, we will go from installing the FuelPHP framework to having a functional – though limited – web application. As our objective here is to introduce the framework and create a sample application as quickly as possible, we won't address important topics such as the ORM, which will be addressed in <em>Chapter 2, Building a To-do List Application</em>.</p>
+<div style="margin-top: 30px; overflow: hidden;"><a style="float: left;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">« Table of contents</a><a style="float: right;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/about-fuelphp.html">II. About FuelPHP »</a></div></div>
+	 <div class='div_layout col-md-3'
                  style='' data-val=0> </div>            </div>
         </div>
         <br>
@@ -140,7 +147,7 @@
     <div class="footer_menu">
 <ul class="nav nav-pills nav-justified" style="text-align: left">    </div>
 
-    <div class="footer_text"><p>© Sébastien Drouyer. Except specified otherwise, all this website content is under&nbsp;<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 3.0</a>.</p>    </div>
+    <div class="footer_text"><p>© Sébastien Drouyer. Except specified otherwise, all this website content is under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 3.0</a>.</p>    </div>
 </div>
 </div>
 </body>

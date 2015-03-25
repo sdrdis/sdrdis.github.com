@@ -2,7 +2,7 @@
 <html>
 <head>
 <base href="http://sebastien.drouyer.com/" />
-<title>About me</title>
+<title>Development process of a FuelPHP application</title>
 <meta name="robots" content="index,follow">
 
 
@@ -116,21 +116,24 @@
     }
 </style>
 
-	 <div class='div_layout col-md-1'
+	 <div class='div_layout col-md-3'
                  style='' data-val=0> </div>
-	 <div class='div_layout col-md-2'
-                 style='' data-val=1> <p><img class="" title="Me" src="http://sebastien.drouyer.com/cache/media/me/s%2C256%2C317-f90188.jpg" alt="Me" height="317" width="256"></p></div>
-	 <div class='div_layout col-md-1'
-                 style='' data-val=0> </div>
-	 <div class='div_layout col-md-7'
-                 style='' data-val=2> <h1>About me</h1>
-<p>Hi! My name is Sébastien Drouyer, I am a computer research scientist and published author. I am passionate about artificial intelligence, computer vision, machine learning, web technologies, software development, computer science and science in a general manner.</p>
-<p>I love to compete in computer science contests, especially those that last more than a few days. I have won several prizes in competitions organized by well known companies such as NASA (TopCoder), Intel, Github and Infotel.</p>
-<h2>Present</h2>
-<p>Since october 2014, I am working on a PhD in the field of computer vision. I am funded by IFP Energies nouvelles and work at the Mines Paristech doctoral school. The topic of my PhD thesis is "3D topography by image segmentation approach : application to scanning electron microscopy ". So far, I have a fantastic experience.</p>
-<h2>Past</h2>
-<p>I have been part of the core team of <a href="http://www.novius-os.org" target="_blank">Novius OS</a>, an open source content management system, and I contributed to the <a href="http://www.fuelphp.com" target="_blank">FuelPHP</a> framework (upon which Novius OS is based) as well as several other open source projects (<a href="https://github.com/sdrdis/hotfix" target="_blank">hotfix</a>, <a href="https://github.com/sdrdis/jquery.earth-3d" target="_blank">jquery.earth-3d</a>, <a href="http://jugglingdb.co/" target="_blank">jugglingdb</a>...). I trained several teams to FuelPHP and am a conference speaker on the subject. My experience led me to write and publish a book about this wonderful framework: <a href="http://sebastien.drouyer.com/projects/book-fuelphp-application-development-blueprints.html" target="_blank">FuelPHP Application Development Blueprints</a>.</p></div>
-	 <div class='div_layout col-md-1'
+	 <div class='div_layout col-md-6'
+                 style='' data-val=3> <div style="margin-top: 10px; margin-bottom: 30px; overflow: hidden;"><a style="float: left;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/about-fuelphp.html">« II. About FuelPHP</a><a style="float: right;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/installing-the-environment.html">IV. Installing the environment »</a><br><a href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">« Table of contents</a></div>
+<h1>III. Development process of a FuelPHP application</h1>
+<p>The development process of a FuelPHP application generally contains the steps shown in the following image:</p>
+<p style="text-align: center;"><img class="nosMedia" title="Process" src="media/fuelphp-book/process.png?t=2015-03-22+15%3A05%3A07" alt="Process" data-media="{&quot;title&quot;:&quot;Process&quot;,&quot;ext&quot;:&quot;png&quot;,&quot;file&quot;:&quot;process&quot;,&quot;path&quot;:&quot;http://sebastien.drouyer.com/media/fuelphp-book/process.png?t=2015-03-22+15%3A05%3A07&quot;,&quot;path_folder&quot;:&quot;media/fuelphp-book&quot;,&quot;media_path&quot;:&quot;/fuelphp-book/process.png&quot;,&quot;image&quot;:true,&quot;thumbnail&quot;:&quot;http://sebastien.drouyer.com/cache/media/fuelphp-book/process/s,64,64-ffb6bb.png?t=2015-03-22+15%3A05%3A07&quot;,&quot;height&quot;:&quot;256&quot;,&quot;width&quot;:&quot;950&quot;,&quot;filesize&quot;:&quot;21.0 KB&quot;,&quot;dimensions&quot;:&quot;950 × 256&quot;,&quot;thumbnailAlternate&quot;:&quot;&quot;,&quot;icon&quot;:&quot;static/apps/noviusos_media/icons/16/png.png&quot;,&quot;actions&quot;:[],&quot;_id&quot;:&quot;56&quot;,&quot;_model&quot;:&quot;Nos\\Media\\Model_Media&quot;,&quot;_title&quot;:&quot;Process&quot;}" height="135" width="500"></p>
+<ul>
+<li><strong>Install FuelPHP</strong>: Since we are using this framework, this first step is quite obvious.</li>
+<li><strong>Config (configuration)</strong>: At the beginning, you will generally need to specify how to connect to the database and which package you will use. Later on, you might also need to create and use your own configuration files to improve the maintainability of your application.</li>
+<li><strong>Scaffold</strong>: The oil command line of FuelPHP allows you to easily generate code files ready to be used. This step is not necessary, but we will often use this functionality in this book because it really speeds up the implementation of your application.</li>
+<li><strong>Dev (development)</strong>: This is where you, as a developer, step in. You customize the generated code to get exactly what you want. When you want to add new features (for instance a new model), you go back to the scaffolding step.</li>
+<li><strong>Tests</strong>: Functional and unit testing are important if you want large applications to stay maintainable. When bugs are discovered, you go back to the development step in order to fix them. Unlike the other steps, we won't approach this subject in this chapter for the sake of its conciseness. It will be addressed in <em>Chapter 5, Building Your Own RESTful API</em>.</li>
+<li><strong>Prod (production)</strong>: Having a project working locally is nice, but the final objective is generally to publish it online. We will give you some directions about this step at the end of this chapter, but we won't get too much into the details, given the diversity of available hosting services.</li>
+</ul>
+<p>Just to be clear, this is a very general guideline, and of course the order of the steps is not rigid. For instance, developers using the test-driven development process could merge the fourth and fifth steps, or a preproduction step could be added. The development process should only depend on each developer and institution's standards.</p>
+<div style="margin-top: 30px; overflow: hidden;"><a style="float: left;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/about-fuelphp.html">« II. About FuelPHP</a><a style="float: right;" href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application/installing-the-environment.html">IV. Installing the environment »</a><br><a href="http://sebastien.drouyer.com/tutorials/tutorial-building-first-fuelphp-application.html">« Table of contents</a></div></div>
+	 <div class='div_layout col-md-3'
                  style='' data-val=0> </div>            </div>
         </div>
         <br>
@@ -140,7 +143,7 @@
     <div class="footer_menu">
 <ul class="nav nav-pills nav-justified" style="text-align: left">    </div>
 
-    <div class="footer_text"><p>© Sébastien Drouyer. Except specified otherwise, all this website content is under&nbsp;<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 3.0</a>.</p>    </div>
+    <div class="footer_text"><p>© Sébastien Drouyer. Except specified otherwise, all this website content is under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 3.0</a>.</p>    </div>
 </div>
 </div>
 </body>
