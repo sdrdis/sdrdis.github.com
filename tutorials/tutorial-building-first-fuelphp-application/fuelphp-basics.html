@@ -198,13 +198,13 @@
 <li>The <code>classes/model/welcome.php</code> class is named <code>Model_Welcome</code></li>
 <li>You can notice that classes are named the same way in the <code>fuel/core</code> directory</li>
 </ul>
-<p>This result was not achieved by accident; FuelPHP follows by default the PSR- 0 standard. You are recommended to read the official documentation about this standard at <a href="http://www.php-fig.org/psr/psr-0/" target="_blank">http://www.php-fig.org/psr/psr-0/</a>.</p>
+<p>This result was not achieved by accident; FuelPHP follows by default the PSR-0 standard. You are recommended to read the official documentation about this standard at <a href="http://www.php-fig.org/psr/psr-0/" target="_blank">http://www.php-fig.org/psr/psr-0/</a>.</p>
 <h2>MVC, HMVC, and how it works on FuelPHP</h2>
 <p>We will now look into one major aspect of the FuelPHP framework – the MVC and HMVC software architecture patterns.</p>
 <h3>What is MVC?</h3>
 <p><strong>Model-view-controller (MVC)</strong> is a software architecture pattern that states that the code should be separated in three categories: models, views, and controllers.</p>
 <p>For those who are not familiar with it, let's illustrate this through an example:</p>
-<p><img class="" style="display: block; margin-left: auto; margin-right: auto;" title="Mvc" src="http://sebastien.drouyer.com/cache/media/fuelphp-book/mvc/s%2C500%2C224-1d620b.png" alt="Mvc" height="224" width="500"></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Mvc" src="http://sebastien.drouyer.com/cache/media/fuelphp-book/mvc/s%2C500%2C224-1d620b.png" alt="Mvc" height="224" width="500"></p>
 <p>Suppose a user tries to access your website. The following are some URLs he/she might request:</p>
 <p><a href="http://my.app/" target="_blank">http://my.app/</a><br><a href="http://my.app/welcome/" target="_blank">http://my.app/welcome/</a><br><a href="http://my.app/welcome/hello" target="_blank">http://my.app/welcome/hello</a></p>
 <p>Depending on the requested URL, your website is generally expected to return some HTML code and it also sometimes needs to update the database, for instance when you want to save the users' comments.</p>
@@ -289,6 +289,7 @@
 <p><a href="http://fuelphp.com/docs/general/routing.html" target="_blank">http://fuelphp.com/docs/general/routing.html</a> (It can be accessed through the FuelPHP website by navigating to <strong>DOCS | TABLE OF CONTENTS | FuelPHP | Routing</strong>)</p>
 <h4>Presenters</h4>
 <p>You might have seen that the <code>hello</code> action doesn't use the <code>View</code> class to display its content, but instead it uses the <code>Presenter</code> class:</p>
+<pre class="prettyprint lang-php">public function action_hello()<br>{<br>    return Response::forge(Presenter::forge('welcome/hello'));<br>}</pre>
 <p>Let's analyze what is happening in this case. First, you can notice that, as for the views, a view file exists at the following path: <code>fuel/app/views/welcome/hello.php</code>. If you open this file, you will see that the code is the same as the one displayed when requesting the URL <a href="http://my.app/welcome/hello" target="_blank">http://my.app/welcome/hello</a>, except for one tiny difference. You can find the following code:</p>
 <pre class="prettyprint lang-php">&lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;!</pre>
 <p>In a normal view, we would have to define the <code>name</code> parameter, except here we didn't. Though, when displaying the web page, this parameter seems to have a defined value (it displays <strong>Hello, World!</strong>). Where could it be defined then?</p>
